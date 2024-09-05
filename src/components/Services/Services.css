@@ -1,0 +1,27 @@
+.service-list {
+    grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
+}
+.service-card, .service-modal-body{
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+}
+.service-card .learn-more-btn span, .service-modal{
+    transition: .3s ease;
+}
+.service-card:hover .learn-more-btn span{
+    transform: translateX(10px);
+}
+.service-modal {
+    opacity: 0;
+    visibility: hidden;
+}
+.service-modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+.service-modal-body{
+    transform: translate3d(-50px,-50px,-50px);
+    transition: .8s ease;
+}
+.service-modal.active .service-modal-body{
+    transform: translate3d(0px,0px,0px);
+}

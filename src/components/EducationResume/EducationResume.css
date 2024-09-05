@@ -1,0 +1,33 @@
+.resume__item:not(:last-child){
+    margin-bottom: 50px;
+}
+.resume__item::before{
+    content:'';
+
+    position: absolute;
+    inset-block: 0;
+    left: 20px;
+    border-left: 1px solid var(--border-color);
+}
+.title{
+    margin-block: 20px 10px;
+    position: relative;
+}
+.title span {
+    color: var(--fist-color);
+    font-family: var(--body-font), serif;
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-600);
+    padding-left: 26px;
+    position:relative;
+}
+.title span::before{
+    content:'';
+    position: absolute;
+    top:9px;
+    left:7px;
+
+    width:10px;
+    height:2px;
+    background-color: var(--text-color);
+}

@@ -1,0 +1,23 @@
+.mountains {
+    background-position: bottom;
+    background-image: url('../../assets/mountains_.png');
+}
+.stars{
+    background-position: bottom;
+    background-image: url('../../assets/stars_.png');
+}
+.planets{
+    background-position: bottom;
+    background-image: url('../../assets/planets.png');
+}
+.outer-container {
+    overflow-x: hidden; /* Utiliser dans un conteneur parent */
+}
+
+.portfolio {
+    padding-top: 50px; /* Assurer un espace suffisant pour le sticky */
+}
+
+.progress.sticky {
+    z-index: 10; /* Apporte le sticky en avant si nécessaire */
+}

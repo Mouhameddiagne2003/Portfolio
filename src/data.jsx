@@ -9,12 +9,11 @@ import {
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
 
-import Work1 from './assets/project-1.jpeg';
-import Work2 from './assets/project-2.jpg';
-import Work3 from './assets/project-3.jpeg';
-import Work4 from './assets/project-4.jpeg';
-import Work5 from './assets/project-5.jpg';
-import Work6 from './assets/project-6.jpg';
+import Work1 from './assets/ecg_iot.png';
+import Work2 from './assets/maternity.jpg';
+import Work3 from './assets/spadon.jpg';
+import Work4 from './assets/c.png';
+import Work5 from './assets/donnees.png';
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -57,67 +56,7 @@ export const links = [
   },
 ];
 
-export const personalInfo = [
-  {
-    id: 1,
-    title: 'First Name : ',
-    description: 'Steve',
-  },
 
-  {
-    id: 2,
-    title: 'Last Name : ',
-    description: 'Milner',
-  },
-
-  {
-    id: 3,
-    title: 'Age : ',
-    description: '27 Years',
-  },
-
-  {
-    id: 4,
-    title: 'Nationality : ',
-    description: 'Tunisian',
-  },
-
-  {
-    id: 5,
-    title: 'Freelance : ',
-    description: 'Available',
-  },
-
-  {
-    id: 6,
-    title: 'Address : ',
-    description: 'Tunis',
-  },
-
-  {
-    id: 7,
-    title: 'Phone : ',
-    description: '+21621184010',
-  },
-
-  {
-    id: 8,
-    title: 'Email : ',
-    description: 'you@mail.com',
-  },
-
-  {
-    id: 9,
-    title: 'Skype : ',
-    description: 'steve.milner',
-  },
-
-  {
-    id: 10,
-    title: 'Langages : ',
-    description: 'French, English',
-  },
-];
 
 export const stats = [
   {
@@ -476,8 +415,10 @@ export const portfolio = [
   {
     id: 1,
     img: Work1,
-    title: 'Photo Editing',
-    desc :'test test test',
+    title: 'Système de suivi du rythme cardiaque à distance pour les personnes âgées',
+    desc :'Pour ce projet, j\'ai développé un système de surveillance à distance du rythme cardiaque spécialement conçu pour les personnes âgées, permettant de visualiser l\'ECG du patient en temps réel. Le système repose sur une architecture MERN Stack (MongoDB, Express, React, Node.js) pour le traitement et l\'affichage des données, ainsi que sur le protocole MQTT pour la communication entre les capteurs et le serveur. Les capteurs utilisés incluent le DHT11 pour la mesure de la température et de l\'humidité, et l\'AD8232 pour la capture des signaux ECG, tous connectés via un module ESP32.\n' +
+        '\n' +
+        'L\'application offre une interface utilisateur intuitive développée avec React, permettant une surveillance en temps réel des données physiologiques à travers un tableau de bord interactif. En plus de la visualisation continue des données ECG, le système est doté d\'un mécanisme d\'alerte en cas d\'anomalies détectées dans les données recueillies, garantissant ainsi une intervention rapide en cas de problème. Grâce au protocole MQTT, les informations des capteurs sont transmises de manière fluide et efficace vers le serveur, assurant une communication stable et fiable. Ce projet vise à améliorer la qualité de vie des personnes âgées en leur offrant une surveillance médicale à distance, tout en facilitant l\'accès des professionnels de santé à des données précises et actualisées.',
     tags: [
       {
         name: "react",
@@ -491,14 +432,26 @@ export const portfolio = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "nodejs-express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "C++",
+        color: "green-text-gradient",
+      },
     ],
-    source_code_link: "https://github.com/"
+    source_code_link: "https://github.com/Mouhameddiagne2003/Heart_iot"
   },
   {
     id: 2,
-    img: Work1,
-    title: 'Photo Editing',
-    desc :'test test test',
+    img: Work2,
+    title: 'Gestion de maternité',
+    desc: 'Le projet de gestion pour une maternité est une application web en cours de développement, conçue pour optimiser la gestion des patientes et la gestion des naissances. En utilisant le MERN Stack, qui combine MongoDB, Express, React et Node.js, ce système offre une interface intuitive et réactive, permettant aux utilisateurs de naviguer facilement entre les différentes fonctionnalités.\n' +
+        '\n' +
+        'Les principales fonctionnalités incluent une authentification sécurisée pour le personnel médical, garantissant que seuls les utilisateurs autorisés peuvent accéder aux données sensibles. Un tableau de bord administrateur est également mis en place pour une gestion efficace des dossiers des patients, avec la possibilité de consulter et de modifier les informations médicales, ainsi que de suivre les naissances en temps réel. En outre, le système permettra de gérer les comptes des membres du personnel, assurant une administration fluide et centralisée des opérations de la maternité.\n' +
+        '\n' +
+        'En intégrant ces fonctionnalités, ce projet vise à améliorer la qualité des soins offerts aux patientes et à simplifier les processus administratifs, contribuant ainsi à un environnement de travail plus efficace pour le personnel médical.',
     tags: [
       {
         name: "react",
@@ -512,47 +465,84 @@ export const portfolio = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs-express",
+        color: "green-text-gradient",
+      },
     ],
-    source_code_link: "https://github.com/"
+    source_code_link: "https://github.com/Mouhameddiagne2003/MaternitePlus"
 
   },
   {
     id: 3,
-    img: Work1,
-    title: 'Photo Editing',
-    desc :'test test test',
+    img: Work3,
+    title: 'Application d\'Envoi de Messages Automatiques pour Les Clients de SPADON',
+    desc:'Le projet d\'application d\'envoi de messages automatiques permet aux entreprises d\'optimiser leur communication avec les clients via des messages de type e-mail et WhatsApp. Construit avec Java EE, cette application utilise des tâches cron pour l\'exécution automatique des classes, garantissant que les messages sont envoyés de manière régulière et sans intervention manuelle.\n' +
+        '\n' +
+        'Pour l\'envoi d\'e-mails, l\'application intègre l\'API SMTP de Google, assurant une délivrabilité fiable et sécurisée des communications par e-mail. En parallèle, elle utilise l\'API WhatsApp de Meta for Developers pour faciliter l\'envoi de messages WhatsApp, permettant aux entreprises de toucher leurs clients sur la plateforme de messagerie la plus populaire.\n' +
+        '\n' +
+        'La sécurité est une priorité dans ce projet ; ainsi, nous avons mis en place des mesures de sécurité robustes, tant au niveau de l\'application qu\'au niveau de Tomcat, garantissant que toutes les communications sont protégées contre les accès non autorisés. Grâce à cette application, les entreprises peuvent automatiser leurs interactions, améliorer l\'engagement client et optimiser leur processus de communication tout en assurant un haut niveau de sécurité.\n' +
+        '\n',
     tags: [
       {
-        name: "react",
+        name: "java2ee",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "html-jsp",
         color: "pink-text-gradient",
+      },
+      {
+        name: "css",
+        color: "blue-text-gradient",
       },
     ],
     source_code_link: "https://github.com/"
   },
   {
     id: 4,
-    img: Work1,
-    title: 'Photo Editing',
-    desc :'test test test',
+    img: Work4,
+    title: 'Évaluation d\'Expressions Arithmétiques en C (Grammaire BNF)',
+    desc: 'Le projet d\'évaluation d\'expressions arithmétiques est une application développée en langage C, visant à implémenter un système capable d\'analyser et de calculer des expressions arithmétiques tout en respectant la grammaire Backus-Naur Form (BNF). Ce système est conçu pour interpréter les expressions de manière précise et efficace, garantissant une évaluation correcte des opérations.\n' +
+        '\n' +
+        'Les principales fonctionnalités de cette application incluent une analyse syntaxique robuste des expressions, permettant d\'identifier et de traiter les différentes composantes arithmétiques. Le calcul des expressions est effectué en suivant la priorité des opérateurs, ce qui assure que les opérations sont exécutées dans le bon ordre. De plus, le système inclut une gestion efficace des erreurs de syntaxe, permettant à l\'utilisateur de recevoir des messages clairs en cas d\'entrées invalides.\n' +
+        '\n' +
+        'Ce projet, déjà achevé, démontre une approche structurée et méthodique dans le traitement des expressions arithmétiques, offrant ainsi une base solide pour toute application nécessitant des calculs complexes.',
     tags: [
       {
-        name: "react",
+        name: "c",
+        color: "blue-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/"
+
+  },
+  {
+    id: 5,
+    img: Work5,
+    title: 'Refonte du Site Web de Spadon',
+    desc:'Le projet de refonte du site web de Spadon est actuellement en cours, visant à moderniser l\'interface et à améliorer l\'expérience utilisateur. Pour ce faire, nous utilisons une approche Full JavaScript pour le développement des pages HTML, en créant un framework personnalisé adapté aux besoins spécifiques de Spadon.\n' +
+        '\n' +
+        'Cette refonte implique la restructuration complète du site, permettant une navigation fluide et intuitive, tout en intégrant des fonctionnalités modernes et réactives. Le choix d’un framework personnalisé nous permet de concevoir des solutions sur mesure, optimisées pour la performance et la convivialité, tout en garantissant une meilleure interactivité pour les utilisateurs.',
+    tags: [
+      {
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "js",
         color: "pink-text-gradient",
       },
     ],
@@ -585,7 +575,7 @@ export const themes = [
   {
     id: 4,
     img: Theme4,
-    color: 'hsl(225, 73%, 57%)',
+    color: '#006DA4',
   },
 
   {

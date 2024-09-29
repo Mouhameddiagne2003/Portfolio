@@ -22,14 +22,14 @@ function Skills() {
                             return (
                                 <div key={index} onMouseEnter={() => setHoveredSkill(index)}
                                      onMouseLeave={() => setHoveredSkill(null)}
-                                     className="group bg-gray-50 hover:cursor-pointer relative min-w-[8rem] max-w-[12rem] p-10 rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out">
+                                     className="group bg-containerColor hover:cursor-pointer relative min-w-[8rem] max-w-[12rem] p-10 rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out">
                                     <div className="">
                                         <CircularProgressbarWithChildren background backgroundPadding={2}
                                                                          styles={buildStyles({
 
                                                                              pathColor: color,
-                                                                             backgroundColor: "hsl(0, 0%, 91%)",
-                                                                             textColor: "#fff",
+                                                                             backgroundColor: "var(--container-color)",
+                                                                             textColor: "var(--fist-color)",
                                                                              trailColor: "transparent"
 
                                                                          })} value={percentage} strokeWidth={7.5}>
@@ -65,8 +65,9 @@ function Skills() {
                                     <div className="">
                                         <CircularProgressbar text={`${percentage}%`}  backgroundPadding={2}
                                                                          styles={buildStyles({
-                                                                             textColor: "#006DA4",
-                                                                             trailColor: "transparent"
+                                                                             textColor: "hsl(0, 0%, 91%)",
+                                                                             trailColor: "transparent",
+                                                                             pathColor: "var(--fist-color)"
                                                                          })} value={percentage} strokeWidth={7.5}>
                                         </CircularProgressbar>
                                     </div>

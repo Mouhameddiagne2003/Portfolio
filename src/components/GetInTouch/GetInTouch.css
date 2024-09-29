@@ -1,0 +1,16 @@
+.content-card{
+    column-gap: 50px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+
+}
+.content-card .title h2{
+    background: linear-gradient(to top, transparent 0%, rgb(0,109,164) 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .9;
+}
+.btn:hover{
+    background: #fff;
+    color: rgb(0,109,164);
+    border: 2px solid rgb(0,109,164);
+}

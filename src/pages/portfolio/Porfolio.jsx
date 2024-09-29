@@ -1,98 +1,97 @@
-import React, {useRef, useEffect} from 'react';
-import "./portfolio.css"
-import {motion, useScroll, useSpring, useTransform} from "framer-motion"
-import {portfolio} from "../../data.jsx";
-import Parallax from "../../components/PortfolioParallax/Parallax.jsx";
-import github  from "../../assets/github.png";
+import React, { useState, useRef } from 'react';
+import { portfolio } from "../../data.jsx";
+import { MdOutlineClose } from "react-icons/md";
+import "./portfolio.css";
+import github from "../../assets/github.png"
+import GetInTouch from "../../components/GetInTouch/GetInTouch.jsx";
 
-const SingleProject = ({item}) => {
-    const ref = useRef();
-    const {scrollYProgress} = useScroll({
-            target: ref,
-        }
-    );
-    const y = useTransform(scrollYProgress, [0,1], [-300,300])
-    return <section ref={ref} className="mt-[450px] w-full  h-screen">
-        <div className="flex justify-center items-center w-full h-full container">
-            <div className="flex justify-center gap-[50px] w-full h-full m-auto wrapper">
-                <div className="ImageContainer h-full">
-                    <div className='relative'>
-                        <img className=' h-full w-full object-cover rounded-2xl' src={item.img} alt=""/>
-                        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-                            <div
-                                onClick={() => window.open(item.source_code_link, "_blank")}
-                                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                            >
-                                <img
-                                    src={github}
-                                    alt='source code'
-                                    className='w-1/2 h-1/2 object-contain'
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <motion.div  className="flex-1 flex flex-col gap-[30px] textContainer">
-                    <h2 className='text-[72px]'>{item.title}</h2>
-                    <p className="text-[20px] "> {item.desc}</p>
-                    <div className='mt-4 flex flex-wrap gap-2'>
+const ProjectItem = ({ item, onClick }) => {
+    return (
+        <div className="imgcardContainer" onClick={onClick}>
+            <div className="img-card relative max-w-[100%] h-[360px] rounded-[10px] overflow-hidden cursor-pointer">
+                <div className="overlay"></div>
+                <div className="info z-[777] absolute bottom-0 left-0 m-[20px] opacity-0">
+                    <h3 className="text-textWhite text-[1.5em]">{item.title}</h3>
+                    <div className="mt-4 flex flex-wrap gap-2">
                         {item.tags.map((tag) => (
-                            <p
-                                key={`${name}-${tag.name}`}
-                                className={`text-[14px] ${tag.color}`}
-                            >
+                            <p key={`${item.title}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
                                 #{tag.name}
                             </p>
                         ))}
                     </div>
-                    <button> See more</button>
-
-                </motion.div>
+                </div>
+                <img src={item.img} alt="" className="w-full h-full object-cover"/>
             </div>
         </div>
-    </section>
-}
+    );
+};
 
 const Portfolio = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
 
+    const closeModal = () => {
+        setSelectedProject(null);
+    };
 
-    const PortfolioRef = useRef()
-
-
-    const {scrollYProgress} = useScroll({
-            target: PortfolioRef,
-            offset: ["end end", "start start"],
-        }
-    );
-
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30
-    })
     return (
-        <div className="">
-            <div className="">
-                <section>
-                    <Parallax/>
-                </section>
-
-                {/*Porfolio*/}
-                <div ref={PortfolioRef} className="relative portfolio">
-                    <div className="progress sticky top-0 left-0 pt-12 text-center text-firstColor ">
-                        <h1 className=" text-[50px] font-semibold text-firstColor">Featured Works</h1>
-                        <motion.div style={{scaleX}} className="h-[10px] bg-firstColor "></motion.div>
-
+        <section className="relative ml-auto mr-auto section w-full py-10">
+            <div className="w-full flex flex-col items-center justify-center">
+                <h3 className="text-center text-4xl md:text-[56px] mb-[70px] text-titleColor font-extrabold">
+                    Mon <span className="text-firstColor"> Portfolio</span>
+                </h3>
+                <div className="content w-4/5">
+                    <div className="portfolio-list my-0 mx-auto gap-[35px] max-w-[100%] ">
+                        {portfolio.map((item, index) => (
+                            <ProjectItem
+                                item={item}
+                                key={index}
+                                onClick={() => setSelectedProject(item)}
+                            />
+                        ))}
                     </div>
-                    {portfolio.map((item) => (
-                        <SingleProject item={item} key={item.id}/>
-                    ))}
                 </div>
             </div>
-        </div>
+            <div className="mt-72 h-[80vh]">
+                <GetInTouch/>
+            </div>
 
 
+            {/* Modal */}
+            {selectedProject && (
+                <div
+                    className="portfolio-model fixed inset-0 z-[9999999] flex justify-center items-center bg-[rgba(0,0,0,0.5)] h-[100vh]">
+                    <div
+                        className="portfolio-model-body relative max-w-[600px] w-full m-[20px] p-[30px] rounded-[10px] bg-containerColor max-h-[90vh] overflow-y-auto">
+                        <span
+                            className="absolute top-[20px] right-[20px] text-[24px] cursor-pointer"
+                            onClick={closeModal}
+                        >
+                            <MdOutlineClose/>
+                        </span>
+                        <h3 className="text-[1.5em]">{selectedProject.title}</h3>
+                        <div className="relative mt-10 ">
+                            <img src={selectedProject.img} alt="" className="w-full my-[10px] mx-0 rounded-[10px]"/>
+                            <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+                                <div
+
+                                    onClick={() => window.open(selectedProject.source_code_link, "_blank")}
+                                    className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                                >
+                                    <img
+                                        src={github}
+                                        alt='source code'
+                                        className='w-1/2 h-1/2 object-contain'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <p className="mt-8">{selectedProject.desc}</p>
+                    </div>
+                </div>
+            )}
+        </section>
     );
 };
 

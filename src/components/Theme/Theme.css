@@ -1,0 +1,24 @@
+.style__switcher{
+    box-shadow: 0 0 4px hsl(0, 0%, 80%);
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+.style__switcher-title{
+    font-size: var(--small-font-size);
+}
+.style__switcher-toggler,
+.style__toggler {
+    font-size: var(--large-font-size);
+    box-shadow: 0 0 2px hsl(0, 0%, 80%);
+    transition: all .3s ease;
+}
+.style__switcher-close{
+    font-size: var(--h2-font-size);
+}
+.show__switcher{
+    transform: translateX(0);
+}
+.show__switcher .style__switcher-toggler,
+.show__switcher .theme__toggler {
+    left: -100%;
+}

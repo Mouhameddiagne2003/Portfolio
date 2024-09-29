@@ -26,11 +26,6 @@ i18n
                 translation: frTranslations
             }
 
-            // ar: {
-            //
-            //     translation: arTranslations,
-            //
-            // },
 
         },
 

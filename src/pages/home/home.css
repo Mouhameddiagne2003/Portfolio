@@ -140,3 +140,48 @@
 /*60% { margin-top: -23.43rem; } !* Ajuster cette valeur pour inclure la hauteur de 15 blocs *!*/
 /*80% { margin-top: -31.24rem; } !* Ajuster cette valeur pour inclure la hauteur de 20 blocs *!*/
 /*100% { margin-top: 0; }*/
+@media screen and (max-width:1024px){
+    .animation{
+        display:none;
+    }
+    .wrapper{
+        margin-top: 25%;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        margin-left:50%;
+    }
+    .home__content{
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: auto;
+    }
+}
+
+@media screen and (max-width: 912px){
+    .home {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        row-gap:10px;
+    }
+    .color__block {
+        display:none;
+    }
+    .home__content{
+        max-width: 1200px;
+        text-align: center;
+        margin-bottom: auto;
+    }
+    .home__title::before {
+        all:unset
+    }
+    .home__title span {
+        display: block;
+    }
+    .icon{
+        display:none;
+    }
+
+}

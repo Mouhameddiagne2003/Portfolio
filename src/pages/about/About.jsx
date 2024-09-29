@@ -3,7 +3,7 @@ import "./about.css";
 import {useTranslation} from "react-i18next";
 import Odometer from "react-odometerjs";
 import { TbFileDownload } from "react-icons/tb";
-import aboutImg from "../../assets/aboutImg1.png";
+import aboutImg from "../../assets/me.jpg";
 import Skills from "../../components/Skills/Skills.jsx";
 import {Educationresume} from "../../data.jsx";
 import EducationResume from "../../components/EducationResume/EducationResume.jsx";
@@ -74,7 +74,7 @@ const About = () => {
                         {t("IntroTitle")}
                     </h3>
                     <div
-                        className="flex md:flex-row flex-col-reverse md:gap-8 items-center gap-12 px-10 max-w-6xl mx-auto">
+                        className="flex md:flex-row flex-col-reverse md:gap-10 items-center gap-12 px-10 max-w-6xl mx-auto">
                         <div className="p-2">
                             <div className="text-textColor font-normal text-lg my-3 ">
                                 <p className="leading-8 text-justify w-11/12 mx-auto"
@@ -83,7 +83,7 @@ const About = () => {
                                     {
                                         info.map(content =>
                                             <div key={content.text}>
-                                                <h3 className="z-0 md:text-4xl text-2xl font-semibold">
+                                                <h3 className="z-0 md:text-4xl text-2xl font-semibold flex justify-center items-center gap-3">
 
                                                     {(() => {
                                                         switch (content.code) {
@@ -123,7 +123,7 @@ const About = () => {
 
 
                         </div>
-                        <div className="flex-1 flex justify-center mt-4 md:mt-0 items-center">
+                        <div className="flex-1 flex justify-center mt-4 md:-mt-32 items-center">
                             <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm aboutImg">
                                 <img src={aboutImg} className="w-full object-cover bg-cyan-600 rounded-xl" alt=""/>
                             </div>
@@ -148,10 +148,10 @@ const About = () => {
                     {t("Education&ExperienceTitle")}
                 </h3>
                 <div className="">
-                    <h3 className="text-[1.2rem] text-firstColor section__subtitle mt-12 text-left font-extrabold ">
+                    <h3 className="text-[1.2rem] text-firstColor section__subtitle mt-12 text-center md:ml-4 md:text-left font-extrabold ">
                         {t("MonParcoursAcademique")}
                     </h3>
-                    <div className="grid grid-cols-1 mt-12">
+                    <div className="grid w-[95%]  mx-auto grid-cols-1 mt-12">
                         <div className="resume__data">
                             {Educationresume.map((val) => {
                                 return <EducationResume key={val.id} {...val} />;
@@ -175,7 +175,7 @@ const About = () => {
                     <Services/>
                 </div>
             </section>
-            <div className="h-screen flex flex-col justify-center items-center portfolio-container">
+            <div className="h-screen md:mt-2 mt-10 flex flex-col justify-center items-center portfolio-container">
                 <p className="w-3/5 font-semibold text-[1.2em]">
                     Au fil des années, j'ai eu le privilège de travailler sur divers projets qui m'ont permis de mettre
                     en pratique et de perfectionner mes compétences. De la conception à la réalisation, chaque projet a

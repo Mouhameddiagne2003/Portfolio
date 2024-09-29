@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-          firstColor: "#006DA4",
-          titleColor: "hsl(0, 0%, 40%)",
-          textColor: "hsl(0, 0%, 50%)",
-          bodyColor: "hsl(0, 0%, 100%)",
-          containerColor: "hsl(0, 0%, 93%)",
-          borderColor: "hsl(0, 0%, 87%)",
-          textWhite: "#fff"
+          firstColor: 'var(--fist-color)',
+          titleColor: "var(--title-color)",
+          textColor: "var(--text-color)",
+          bodyColor: "var(--body-color)",
+          containerColor: "var(--container-color)",
+          borderColor: "var(--border-color)",
+          textWhite: "var(--text-white)"
       },
       fonts : {
           weight400: "400",

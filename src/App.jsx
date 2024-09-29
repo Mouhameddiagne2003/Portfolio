@@ -9,6 +9,9 @@ import Home from "./pages/home/Home.jsx";
 import About from "./pages/about/About.jsx";
 import Porfolio from "./pages/portfolio/Porfolio.jsx";
 import Contact from "./pages/contact/Contact.jsx";
+import Cursor from "./components/Cursor/Cursor.jsx";
+import Language from "./components/Language/Language.jsx";
+import Theme from "./components/Theme/Theme.jsx";
 function App() {
 const { t, i18n } = useTranslation();
 
@@ -17,6 +20,9 @@ const changeLanguage = (lng) => {
     };
 return(
     <BrowserRouter>
+        <Theme/>
+        <Language/>
+        <Cursor/>
         <Navbar />
         <Routes>
             <Route index element={<Home />} />

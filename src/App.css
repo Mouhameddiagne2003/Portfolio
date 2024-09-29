@@ -36,12 +36,28 @@
 
 }
 
+/* dark theme */
+.dark-theme {
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 80%);
+    --body-color: hsl(0, 0%, 7%);
+    --container-color: hsl(0, 1%, 17%);
+    --border-color: hsl(0, 0%, 15%);
+}
+
 /* ================== BASE ======================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 
 body,input,textarea {
     font-family: var(--body-font), serif;
@@ -73,6 +89,7 @@ button,input,textarea{
 img {
       max-width: 100%;
 }
+
 
 /*=======================  REUSABLE CSS  ==============*/
 .section{

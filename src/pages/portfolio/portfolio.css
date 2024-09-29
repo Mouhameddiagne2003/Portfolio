@@ -1,23 +1,56 @@
-.mountains {
-    background-position: bottom;
-    background-image: url('../../assets/mountains_.png');
+.portfolio-list .img-card .overlay {
+    transition: 1s ease;
 }
-.stars{
-    background-position: bottom;
-    background-image: url('../../assets/stars_.png');
+.portfolio-list .img-card{
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
 }
-.planets{
-    background-position: bottom;
-    background-image: url('../../assets/planets.png');
+.portfolio-list .img-card:hover .overlay {
+    z-index:777;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
 }
-.outer-container {
-    overflow-x: hidden; /* Utiliser dans un conteneur parent */
+.portfolio-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    gap: 35px;
+    width: 100%;
+}
+.portfolio-list .img-card .info {
+    transform: translateY(20px);
+    transition: .5s ease;
+    color: #fff;
 }
 
-.portfolio {
-    padding-top: 50px; /* Assurer un espace suffisant pour le sticky */
+.portfolio-list .img-card:hover .info {
+    transform: translateY(0);
+    opacity: 1;
+}
+.portfolio-model{
+    backdrop-filter: blur(20px);
+}
+.portfolio-model-body {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgb(0,109,164) #f1f1f1; /* Firefox */
 }
 
-.progress.sticky {
-    z-index: 10; /* Apporte le sticky en avant si nécessaire */
+.portfolio-model-body::-webkit-scrollbar {
+    width: 4px;
 }
+
+.portfolio-model-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.portfolio-model-body::-webkit-scrollbar-thumb {
+    background-color: rgb(0,109,164);
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.portfolio-model-body::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+

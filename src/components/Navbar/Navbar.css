@@ -4,6 +4,9 @@
 .nav__link {
     padding-block: 14px;
 }
+.dark-theme .nav__link {
+    border-color: hsl(0, 0%, 20%)
+}
 .active-nav ,
 .active-nav .nav__name,
 .nav__link:hover > h3,

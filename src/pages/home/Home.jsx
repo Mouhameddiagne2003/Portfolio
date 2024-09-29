@@ -13,19 +13,19 @@ const Home = () => {
     // Déterminez le padding en fonction de la langue actuelle
     const padding = i18n.language === 'en' ? 'px-[35px] py-[15px]' : 'px-[41px] py-[15px]';
     return (
-        <section className="grid items-center p-[40px] h-[100vh] section gap-[30px] home">
-            <div className="relative flex items-center justify-center h-screen ">
-                <img className="home__img z-10 w-[500px] rounded-[20px] h-[80%]" src={Profile} alt="" />
+        <section className="grid items-center p-[40px] h-[100vh] section gap-[20px] md:gap-[30px] home">
+            <div className="relative flex items-center justify-center h-[45vh] sm:h-[50vh] md:h-screen ">
+                <img className="home__img z-[9] md:w-[500px] md:rounded-[20px] md:h-[80%] w-[270px] h-[270px] rounded-[50%] " src={Profile} alt="" />
 
             </div>
             <div className="home__content">
-                <h4 className="text-lg pl-[50px] mb-2">{t("Welcome")}</h4>
-                <div className="max-w:[600px] mx-auto pt-[20px] home__data">
+                <h4 className="text-[20px]  md:text-lg pl-0 md:pl-[50px] mb-2">{t("Welcome")}</h4>
+                <div className="max-w:[600px] mx-auto pt-[20px] home__data md:pr-0 pr-[20px] ">
 
-                    <h1 className="home__title pl-[50px] relative leading-1.24">
-                        <span className="text-firstColor"> {t("HomeTitle")}</span>
+                    <h1 className="home__title pl-0 md:pl-[50px] relative leading-[1.24]">
+                        <span className="text-firstColor text-[30px] md:text-[40px] md:font-normal font-[800]"> {t("HomeTitle")}</span>
                         {/*{" " + t("JobTitle")}*/}
-                        <section className="animation text-[#F2F2F2] mt-2">
+                        <section className="animation text-[#F2F2F2] mt-2 ">
                             <div className="first">
                                 <div>{t("JobTitle1")}</div>
                             </div>
@@ -43,12 +43,12 @@ const Home = () => {
                             </div>
                         </section>
                     </h1>
-                    <p className="w-[80%] leading-10 my-[16px] mx-[32px]">
+                    <p className="md:w-[85%] w-full leading-8 md:leading-10 mt-8 md:mt-0 my-0 md:my-[16px] mx-0 md:mx-[32px]">
                         {t("Description")}
                     </p>
                     <div className="wrapper">
 
-                            <Link className="gap-2.5 flex items-center w-1/3 link_wrapper" to="/about">
+                            <Link className="gap-2.5 flex items-center md:w-1/3 link_wrapper" to="/about">
                                 <a className=  {`${padding}`}  >{t("More") + " "}</a>
                                 {/*<span className="button__icon">*/}
                                 {/*    <FaArrowRight/>*/}

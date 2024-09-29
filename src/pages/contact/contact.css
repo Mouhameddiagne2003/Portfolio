@@ -1,0 +1,15 @@
+.btn:hover{
+    background: #fff;
+    color: rgb(0,109,164);
+    border: 2px solid rgb(0,109,164);
+}
+::placeholder{
+    color: rgb(0,109,164);
+}
+.contact_social-link{
+    transition: all 0.3s ease;
+}
+.contact_social-link:hover{
+    background-color: var(--fist-color);
+    color:var(--text-white)
+}

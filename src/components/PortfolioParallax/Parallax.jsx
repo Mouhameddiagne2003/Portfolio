@@ -10,7 +10,7 @@ function Parallax() {
         }
     )
 
-    const yBg = useTransform(scrollYProgress,[0,1], ["0%","9 0%"] )
+    const yBg = useTransform(scrollYProgress,[0,1], ["0%","90%"] )
     const yText = useTransform(scrollYProgress,[0,1], ["0%","550%"] )
     const textColor = useMotionValue("#FFFFFF"); // Initial color: white
     // useEffect(() => {
@@ -26,14 +26,14 @@ function Parallax() {
         <div className="">
             {/*Parallax Effect */}
             <div ref={ParallaxRef} style={{background: "linear-gradient(180deg, #0a1f44, #0d3b66, #1e56a0)"}}
-                 className=" overflow-hidden h-screen w-full flex flex-col justify-center items-center relative">
+                 className="overflow-hidden h-screen w-full flex flex-col justify-center items-center relative">
                 <h3 className="text-white font-extrabold text-center text-4xl -mt-40 mb-32 md:text-[56px]">
                     Mon <span className="text-firstColor "> Portfolio </span>
                 </h3>
-                <motion.h1 style={{y: yText, color: textColor}} className="text-[80px] mb-32"> What We Did ?</motion.h1>
-                <motion.div className={` mountains absolute bg-cover w-full h-full z-[3]`}></motion.div>
-                <motion.div style={{y: yBg}} className="planets absolute bg-cover w-full h-full z-[2]"></motion.div>
-                <motion.div style={{x: yBg}} className="stars absolute bg-cover w-full h-full z-[1]"></motion.div>
+                <motion.h1 style={{y: yText, color: textColor}} className="text-[40px] sm:text-[60px] mb-32 md:text-[80px] text-center "> What We Did ?</motion.h1>
+                <motion.div className={` bg-no-repeat mountains absolute bg-contain md:bg-cover w-full h-full z-[3]`}></motion.div>
+                <motion.div style={{y: yBg}} className=" bg-no-repeat planets absolute bg-contain md:bg-cover w-full h-full z-[2]"></motion.div>
+                <motion.div style={{x: yBg}} className="bg-no-repeat stars absolute bg-contain md:bg-cover w-full h-full z-[1]"></motion.div>
             </div>
         </div>
     );

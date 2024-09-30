@@ -1,7 +1,7 @@
 .btn:hover{
     background: #fff;
-    color: rgb(0,109,164);
-    border: 2px solid rgb(0,109,164);
+    color: var(--fist-color);
+    border: 2px solid var(--fist-color);
 }
 ::placeholder{
     color: rgb(0,109,164);

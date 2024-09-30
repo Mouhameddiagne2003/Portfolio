@@ -4,14 +4,17 @@ import { MdOutlineClose } from "react-icons/md";
 import "./portfolio.css";
 import github from "../../assets/github.png"
 import GetInTouch from "../../components/GetInTouch/GetInTouch.jsx";
+import {useTranslation} from "react-i18next";
 
 const ProjectItem = ({ item, onClick }) => {
+
+    const {t}= useTranslation()
     return (
         <div className="imgcardContainer" onClick={onClick}>
             <div className="img-card relative max-w-[100%] h-[360px] rounded-[10px] overflow-hidden cursor-pointer">
                 <div className="overlay"></div>
                 <div className="info z-[777] absolute bottom-0 left-0 m-[20px] opacity-0">
-                    <h3 className="text-textWhite text-[1.5em]">{item.title}</h3>
+                    <h3 className="text-textWhite text-[1.5em]">{t(item.title)}</h3>
                     <div className="mt-4 flex flex-wrap gap-2">
                         {item.tags.map((tag) => (
                             <p key={`${item.title}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
@@ -27,6 +30,10 @@ const ProjectItem = ({ item, onClick }) => {
 };
 
 const Portfolio = () => {
+
+    const {t,i18n}= useTranslation()
+    const firstHalfEn = "My";
+    const firstHalfFr = "Mon";
     const [selectedProject, setSelectedProject] = useState(null);
 
     const closeModal = () => {
@@ -36,11 +43,12 @@ const Portfolio = () => {
     return (
         <section className="relative ml-auto mr-auto section w-full py-10">
             <div className="w-full flex flex-col items-center justify-center">
-                <h3 className="text-center text-4xl md:text-[56px] mb-[70px] text-titleColor font-extrabold">
-                    Mon <span className="text-firstColor"> Portfolio</span>
+                <h3 className="text-center mt-20 text-4xl md:text-[56px] mb-[70px] text-titleColor font-extrabold">
+                    {i18n .language === "fr" ? firstHalfFr + " " : firstHalfEn + " "} <span className="text-firstColor"> {t('Portfolio')}</span>
                 </h3>
-                <div className="content w-4/5">
-                    <div className="portfolio-list my-0 mx-auto gap-[35px] max-w-[100%] ">
+
+                <div className="content w-4/5 mt-20">
+                    <div className="portfolio-list my-0 mx-auto lg:gap-[40px] gap-[80px] max-w-[100%] ">
                         {portfolio.map((item, index) => (
                             <ProjectItem
                                 item={item}
@@ -68,7 +76,7 @@ const Portfolio = () => {
                         >
                             <MdOutlineClose/>
                         </span>
-                        <h3 className="text-[1.5em]">{selectedProject.title}</h3>
+                        <h3 className="text-[1.5em]">{t(selectedProject.title)}</h3>
                         <div className="relative mt-10 ">
                             <img src={selectedProject.img} alt="" className="w-full my-[10px] mx-0 rounded-[10px]"/>
                             <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -87,7 +95,11 @@ const Portfolio = () => {
                         </div>
 
 
-                        <p className="mt-8">{selectedProject.desc}</p>
+                        <p
+                            className="mt-8"
+                            dangerouslySetInnerHTML={{__html: t(selectedProject.desc)}}
+                        ></p>
+
                     </div>
                 </div>
             )}

@@ -11,8 +11,10 @@ import { styles } from "../../styles.js";
 import { experiences } from "../../data.jsx";
 import { SectionWrapper } from "../../hoc/SectionWrapper.jsx";
 import { textVariant } from "../../utils/motion.js";
+import {useTranslation} from "react-i18next";
 
 const ExperienceCard = ({ experience }) => {
+    const {t} = useTranslation();
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -34,7 +36,7 @@ const ExperienceCard = ({ experience }) => {
             }
         >
             <div>
-                <h3  style={{ wordWrap: "break-word", whiteSpace: "normal", overflowWrap: "break-word" }} className='text-white text-[24px] font-bold'>{experience.title}</h3>
+                <h3  style={{ wordWrap: "break-word", whiteSpace: "normal", overflowWrap: "break-word" }} className='text-white text-[24px] font-bold'>{t(experience.title)}</h3>
                 <p
                     className='text-secondary text-[16px] font-semibold'
                     style={{ margin: 0 }}
@@ -49,7 +51,7 @@ const ExperienceCard = ({ experience }) => {
                         key={`experience-point-${index}`}
                         className='text-white-100 text-[14px] pl-1 tracking-wider'
                     >
-                        {point}
+                        {t(point)}
                     </li>
                 ))}
             </ul>
@@ -58,15 +60,16 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experiences = () => {
+    const {t} = useTranslation();
 
     return (
         <>
             <motion.div variants={textVariant()}>
                 <p className={`${styles.sectionSubText} text-center`}>
-                    What I have done so far
+                    {t("What I have done so far")}
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center text-firstColor`}>
-                    Work Experience.
+                    {t("Work Experience")}.
                 </h2>
             </motion.div>
 

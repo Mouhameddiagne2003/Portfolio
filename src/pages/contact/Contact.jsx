@@ -3,6 +3,7 @@ import './contact.css';
 import {motion, useInView} from "framer-motion";
 import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaInstagram, FaFacebook, FaLinkedin} from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import {useTranslation} from "react-i18next";
 import emailjs from '@emailjs/browser';
 
 const variants= {
@@ -14,13 +15,18 @@ const variants= {
         y: 0,
         opacity: 1,
         transitions: {
-            duration: 1.5,
+            duration: 2,
             staggerChildren: 0.5,
         }
     }
 }
 
 const Contact = () => {
+    const {t,i18n} = useTranslation();
+    const firstHalfEn = "Contact";
+    const firstHalfFr = "Contactez";
+    const secondHalfEn = "Me";
+    const secondHalfFr = "Moi";
     const [success, SetSuccess]= useState(false);
     const [error, SetError]= useState(false);
 
@@ -34,52 +40,52 @@ const Contact = () => {
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+
                     SetSuccess(true);
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+
                     SetError(true);
                 },
             );
     };
     const ref= useRef();
-    const isInView = useInView(ref, {margin:"-100px"});
+    const isInView = useInView(ref, {margin:"-50px"});
     return (
         <section className="contact section relative ml-auto mr-auto section" >
             <div className="w-full flex flex-col items-center justify-center">
                 <h3 className="text-center text-4xl md:text-[56px] mb-[70px] text-titleColor font-extrabold">
-                    Contactez<span className="text-firstColor"> Moi </span>
+                    {i18n .language === "fr" ? firstHalfFr + " " : firstHalfEn + " "} <span className="text-firstColor">  {i18n .language === "fr" ? secondHalfFr + " " : secondHalfEn + " " } </span>
                 </h3>
             </div>
-            <motion.div ref={ref} className="flex justify-around w-full content mt-20 " variants={variants} initial="initial" whileInView="animate">
-                <motion.div className="textContainer" variants={variants}>
-                    <motion.h2 className="text-[2.1em] font-extrabold mb-[40px]" variants={variants}> Lets discuss your project </motion.h2>
+            <motion.div ref={ref} className="flex justify-around lg:w-full w-[85%] mx-auto content lg:flex-row flex-col lg:text-[1rem] text-[0.8rem] mt-20 " variants={variants} initial="initial" whileInView="animate">
+                <motion.div className="textContainer mb-[40px] lg:mb-0" variants={variants}>
+                    <motion.h2 className="text-[2.1em] font-extrabold mb-[40px]" variants={variants}> {t("letsdiscuss")} </motion.h2>
                     <motion.ul className="contact-list " variants={variants}>
                         <motion.li className="mb-[40px]" variants={variants}>
                             <h3 className="item-title text-[1.3em] font-semibold mb-[10px]">
                                 <div className="flex ">
-                                    <FaPhoneAlt className="text-firstColor text-[1.3em] mr-[15px]"/> <div> Tel </div>
+                                    <FaPhoneAlt className="text-firstColor lg:text-[1.3em] text-[1.1em] mr-[15px]"/> <div> Tel </div>
                                 </div>
-                                  <span className="text-textColor font-[200] ml-[40px]"> +221 78 195 89 11 / +221 76 776 49 07 </span>
+                                  <span className="text-textColor font-[150] lg:font-[200] ml-[40px]"> +221 78 195 89 11 / +221 76 776 49 07 </span>
                             </h3>
                         </motion.li>
                         <motion.li className="mb-[40px]" variants={variants}>
-                            <motion.h3 variants={variants} className="item-title text-[1.3em] font-semibold mb-[10px]">
+                            <motion.h3 variants={variants} className="item-title text-[1.1em] lg:text-[1.3em] font-semibold mb-[10px]">
                                 <div className="flex">
-                                    <FaEnvelope className="text-firstColor text-[1.3em] mr-[15px]"/> Mail
+                                    <FaEnvelope className="text-firstColor text-[1.1em] lg:text-[1.3em] mr-[15px]"/> Mail
                                 </div>
                                <span
-                                className="text-textColor ml-[40px] font-[200]"> <a
+                                className="text-textColor ml-[40px] lg:font-[200] font-[150]"> <a
                                 href="mailto:mouhameddiagne029@gmail.com">mouhameddiagne029@gmail.com</a> </span>
                             </motion.h3>
                         </motion.li>
                         <motion.li className="mb-[40px]" variants={variants}>
                         <motion.h3 variants={variants} className="item-title text-[1.3em] font-semibold mb-[10px]">
                             <div className="flex">
-                                <FaMapMarkerAlt  className="text-firstColor text-[1.3em] mr-[15px]"/> Address
+                                <FaMapMarkerAlt  className="text-firstColor text-[1.1em] lg:text-[1.3em] mr-[15px]"/> Address
                             </div>
-                                <span className="text-textColor ml-[40px] font-[200]"> Mamelles Aviation, Ouakam, Dakar, Sénégal </span>
+                                <span className="text-textColor ml-[40px] lg:font-[200] font-[150]"> Mamelles Aviation, Ouakam, Dakar, Sénégal </span>
                             </motion.h3>
                         </motion.li>
                         <motion.li className="mb-[40px]" variants={variants}>
@@ -100,11 +106,11 @@ const Contact = () => {
                         </motion.li>
                     </motion.ul>
                 </motion.div>
-                <div className="formContainer relative">
+                <div className="formContainer relative ">
                     <p className="text-[1.6em] mb-[30px]">
-                        Im always open to discussing product <br/>
+                        {t("always")} <br/>
                         <span className="text-firstColor font-[700]">
-                            design work or partnerships
+                            {t("partner")}
                         </span>
                     </p>
                     <motion.div className="phoneSvg absolute m-auto stroke-firstColor" initial={{opacity:1}} whileInView={{opacity:0, visibility:"hidden"}} transition={{delay:3, duration:1}}>
@@ -119,19 +125,19 @@ const Contact = () => {
                     </motion.div>
                     <motion.form onSubmit={sendEmail} ref={formRef} action="" className="contact-form" initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:4, duration:1}}>
                         <div className="first-row">
-                            <input required className="w-full border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="text" placeholder="Name" name="name"/>
+                            <input required className="w-full border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="text" placeholder={t("name")} name="name"/>
                         </div>
-                        <div className="second-row flex justify-between ">
-                            <input required className=" w-[48%] border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="email" placeholder="Email" name="email"/>
-                            <input className="w-[48%] border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="text" placeholder="Subject" name="subject"/>
+                        <div className="second-row flex flex-col lg:flex-row justify-between ">
+                            <input required className=" w-full lg:w-[48%] border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="email" placeholder="Email" name="email"/>
+                            <input className="w-full lg:w-[48%] border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[30px] pl-[20px] rounded-[5px]" type="text" placeholder={t("subject")} name="subject"/>
                         </div>
                         <div className="third-row">
                             <textarea  required className="w-full resize-none border-none text-firstColor bg-containerColor mb-[20px] pt-[15px] pr-[40px] pb-[40px] pl-[20px] rounded-[5px]" name="message" id="" rows="7" placeholder="Message..."></textarea>
                         </div>
-                        <button type="submit" className="bg-firstColor text-textWhite border-none font-medium btn mt-0 py-[20px] px-[30px] rounded-[5px] flex items-center justify-center gap-4 curser-pointer">Envoyer Message  <FaPaperPlane /> </button>
+                        <button type="submit" className="bg-firstColor text-textWhite border-none font-medium btn mt-0 py-[20px] px-[30px] rounded-[5px] flex items-center justify-center gap-4 curser-pointer"> {t("sendmess")}  <FaPaperPlane /> </button>
                     </motion.form>
                     {error && "Error"}
-                    {success && "Success"}
+                    {success && "Success - Mail envoyé"}
                 </div>
             </motion.div>
 

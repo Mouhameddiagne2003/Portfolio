@@ -14,8 +14,6 @@
 .portfolio-list{
     display:grid;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-    grid-column-gap: 20px;
-    gap: 35px;
     width: 100%;
 }
 .portfolio-list .img-card .info {
@@ -33,7 +31,7 @@
 }
 .portfolio-model-body {
     scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgb(0,109,164) #f1f1f1; /* Firefox */
+    scrollbar-color: var(--fist-color) #f1f1f1; /* Firefox */
 }
 
 .portfolio-model-body::-webkit-scrollbar {
@@ -45,7 +43,7 @@
 }
 
 .portfolio-model-body::-webkit-scrollbar-thumb {
-    background-color: rgb(0,109,164);
+    background-color: var(--fist-color);
     border-radius: 10px;
     border: 2px solid #f1f1f1;
 }

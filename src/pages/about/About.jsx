@@ -10,16 +10,14 @@ import EducationResume from "../../components/EducationResume/EducationResume.js
 import ComputersCanvas from "../../components/Computer/Computers.jsx";
 import Experiences from "../../components/Experiences/Experiences.jsx";
 import Services from "../../components/Services/Services.jsx";
+import {Link} from 'react-router-dom';
 
 
 const About = () => {
-    const {t} = useTranslation();
-    const text = t('About');
-    const words = text.split(' ');
-    const middleIndex = Math.ceil(words.length / 2);
+    const {t,i18n } = useTranslation();
 
-    const firstHalf = words.slice(0, middleIndex).join(' ');
-    const secondHalf = words.slice(middleIndex).join(' ');
+    const firstHalfEn = "Me";
+    const firstHalfFr = "A";
     const info = [
         {text: t("Experience"), count: "02", code: "Experience"},
         {text: t("Projects"), count: "10", code: "Project"},
@@ -68,7 +66,7 @@ const About = () => {
             <section className="py-10 ">
                 <div className="text-center text-4xl md:text-[56px] mb-[70px]">
                     <h3 className="text-titleColor font-extrabold">
-                        {firstHalf} <span className="text-firstColor"> {secondHalf}</span>
+                        {i18n .language === "fr" ? firstHalfFr + " " : ""} <span className="text-firstColor"> {t('About')}</span> {i18n .language === "en" ? " " + firstHalfEn : ""}
                     </h3>
                     <h3 className="text-titleColor my-3 text-[1.3rem]  md:mt-10 md:text-2xl">
                         {t("IntroTitle")}
@@ -79,11 +77,11 @@ const About = () => {
                             <div className="text-textColor font-normal text-lg my-3 ">
                                 <p className="leading-8 text-justify w-11/12 mx-auto"
                                    dangerouslySetInnerHTML={{__html: t("IntroductionText")}}/>
-                                <div id="mon-element" className="flex mt-10 items-center gap-7 ">
+                                <div id="mon-element" className="flex mt-10 items-center justify-center gap-7 ">
                                     {
                                         info.map(content =>
                                             <div key={content.text}>
-                                                <h3 className="z-0 md:text-4xl text-2xl font-semibold flex justify-center items-center gap-3">
+                                                <h3 className="z-0 md:text-4xl text-3xl md:font-[800] flex justify-center items-center gap-3">
 
                                                     {(() => {
                                                         switch (content.code) {
@@ -99,7 +97,7 @@ const About = () => {
                                                     })()}
 
                                                     <span
-                                                        className="text-firstColor text-3xl md:text-6xl font-extrabold">{" "} + </span>
+                                                        className="text-firstColor text-3xl md:text-5xl font-extrabold">{" "} + </span>
                                                 </h3>
                                                 <span className="md:text-base text-sm">{content.text}</span>
                                             </div>
@@ -133,7 +131,7 @@ const About = () => {
                 </div>
 
             </section>
-            <div className="separator border-t border-t-borderColor max-w-[40%] mt-[72px] mx-auto mb-[56px]"></div>
+            <div className="separator border-t border-t-borderColor max-w-[40%] md:mt-[10px] lg:mt-[72px] mx-auto mb-[56px]"></div>
             <section className="skills">
                 <h3 className="text-[1.3rem] text-titleColor section__subtitle text-center ">
                     {t("SkillsTitle")}
@@ -176,20 +174,20 @@ const About = () => {
                 </div>
             </section>
             <div className="h-screen md:mt-2 mt-10 flex flex-col justify-center items-center portfolio-container">
-                <p className="w-3/5 font-semibold text-[1.2em]">
-                    Au fil des années, j'ai eu le privilège de travailler sur divers projets qui m'ont permis de mettre
-                    en pratique et de perfectionner mes compétences. De la conception à la réalisation, chaque projet a
-                    été une opportunité d'apprentissage et de croissance. Je vous invite à découvrir mon portfolio, où
-                    vous trouverez une sélection de mes travaux les plus récents.
+                <p className="w-3/5 font-semibold lg:text-[1.2em] md:text-[1.5em]">
+                    {t("exploretext")}
                 </p>
-                <a href="/portfolio" className="bg-firstColor portfolio-link">
-                    Explorez mon portfolio
-                </a>
+                <Link to="/portfolio">
+                    <a  className="bg-firstColor portfolio-link">
+                        {t("explore")}
+                    </a>
+                </Link>
+
             </div>
 
 
         </main>
-    );
+);
 };
 
 export default About;

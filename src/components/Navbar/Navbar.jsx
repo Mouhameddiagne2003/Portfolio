@@ -21,7 +21,7 @@ const Navbar = () => {
                                         {link.icon}
                                     </div>
 
-                                    <h3 className=" text-titleColor text-[24px] font-weight500 md:absolute md:top-0 md:right-0 md:px-6 md:bg-firstColor md:h-[100%] md:leading-[50px] md:rounded-[30px] md:text-[15px] md:text-textWhite nav__name">
+                                    <h3 className="text-titleColor text-[24px] font-weight500 md:absolute md:top-0 md:right-0 md:px-6 md:bg-firstColor md:h-[100%] md:leading-[50px] md:rounded-[30px] md:text-[15px] md:text-textWhite nav__name">
                                         {t(link.name)}
                                     </h3>
                                 </NavLink>

@@ -65,7 +65,7 @@ function Skills() {
                                     <div className="">
                                         <CircularProgressbar text={`${percentage}%`}  backgroundPadding={2}
                                                                          styles={buildStyles({
-                                                                             textColor: "hsl(0, 0%, 91%)",
+                                                                             textColor: "var(--title-color)",
                                                                              trailColor: "transparent",
                                                                              pathColor: "var(--fist-color)"
                                                                          })} value={percentage} strokeWidth={7.5}>

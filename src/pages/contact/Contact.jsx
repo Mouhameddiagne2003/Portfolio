@@ -90,16 +90,16 @@ const Contact = () => {
                         </motion.li>
                         <motion.li className="mb-[40px]" variants={variants}>
                             <motion.div variants={variants} className="flex gap-[16px] contact_socials">
-                                <a href="" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
+                                <a href="https://web.facebook.com/profile.php?id=100008813835694&locale=fr_FR" target="_blank" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
                                     <FaFacebook />
                                 </a>
-                                <a href="" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
+                                <a href="https://www.instagram.com/_amethjr10/" target="_blank" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
                                     <FaInstagram />
                                 </a>
-                                <a href="" className="contact_social-link bg-containerColor flex items-center justify-center text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center">
+                                <a href="https://x.com/_amethjr10" target="_blank" className="contact_social-link bg-containerColor flex items-center justify-center text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center">
                                     <FaSquareXTwitter />
                                 </a>
-                                <a href="" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
+                                <a href="https://www.linkedin.com/in/mouhamed-diagne-265015245/" target="_blank" className="contact_social-link bg-containerColor text-titleColor w-[40px] h-[40px] rounded-[50%] leading-[44px] text-center flex items-center justify-center">
                                     <FaLinkedin />
                                 </a>
                             </motion.div>
@@ -119,7 +119,7 @@ const Contact = () => {
                                 fill="none"
                                 initial={{pathLength:0}}
                                          animate={isInView && {pathLength:1}}
-                                         transition={{duration:4}}
+                                         transition={{duration:3}}
                             />
                         </svg>
                     </motion.div>

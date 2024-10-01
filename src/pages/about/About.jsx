@@ -11,6 +11,7 @@ import ComputersCanvas from "../../components/Computer/Computers.jsx";
 import Experiences from "../../components/Experiences/Experiences.jsx";
 import Services from "../../components/Services/Services.jsx";
 import {Link} from 'react-router-dom';
+import Cv from '../../assets/Mouhamed-DIAGNE-CV-Octobre24.pdf';
 
 
 const About = () => {
@@ -106,7 +107,7 @@ const About = () => {
                                 </div>
                                 <br/>
                                 <br/>
-                                <a href="" download=' '
+                                <a href={Cv} download='Mouhamed-DIAGNE-Cv-Resume '
                                    className="  align-center button inline-block text-titleColor border border-solid border-firstColor pt-[15px] pr-[70px] pb-[15px] pl-[35px] rounded-[35px] text-[15px] font-medium relative">
                                     {/*<button className="">*/}
                                     Download CV

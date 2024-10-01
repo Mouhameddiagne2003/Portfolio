@@ -43,7 +43,7 @@ function Skills() {
                                             </div>
                                         </CircularProgressbarWithChildren>
                                     </div>
-                                    <p className="text-xl mt-3">{t(level)}</p>
+                                    {/*<p className="text-xl mt-3">{t(level)}</p>*/}
                                 </div>
                             )
                         }

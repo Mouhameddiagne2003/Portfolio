@@ -12,6 +12,7 @@ import Contact from "./pages/contact/Contact.jsx";
 import Cursor from "./components/Cursor/Cursor.jsx";
 import Language from "./components/Language/Language.jsx";
 import Theme from "./components/Theme/Theme.jsx";
+import { Analytics } from "@vercel/analytics/react"
 function App() {
 const { t, i18n } = useTranslation();
 
@@ -20,6 +21,7 @@ const changeLanguage = (lng) => {
     };
 return(
     <BrowserRouter>
+        <Analytics className="AppAnalytics" />
         <Theme/>
         <Language/>
         <Cursor/>

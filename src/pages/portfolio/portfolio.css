@@ -31,7 +31,7 @@
 }
 .portfolio-model-body {
     scrollbar-width: thin; /* Firefox */
-    scrollbar-color: var(--fist-color) #f1f1f1; /* Firefox */
+    scrollbar-color: var(--first-color) #f1f1f1; /* Firefox */
 }
 
 .portfolio-model-body::-webkit-scrollbar {
@@ -43,7 +43,7 @@
 }
 
 .portfolio-model-body::-webkit-scrollbar-thumb {
-    background-color: var(--fist-color);
+    background-color: var(--first-color);
     border-radius: 10px;
     border: 2px solid #f1f1f1;
 }

@@ -11,7 +11,7 @@
 .active-nav .nav__name,
 .nav__link:hover > h3,
 .nav__link:hover{
-    color: var(--fist-color);
+    color: var(--first-color);
 }
 nav .nav__toggle:hover {
     -moz-transform: scale(1.1);
@@ -33,7 +33,7 @@ nav .nav__toggle:hover {
 }
 .nav__toggle:hover {
     .burger{
-        background-color: var(--fist-color);
+        background-color: var(--first-color);
     }
 }
 .focus {
@@ -67,7 +67,7 @@ nav .nav__toggle:hover {
         all:unset;
     }
     .active-nav {
-        background-color: var(--fist-color);
+        background-color: var(--first-color);
     }
     .nav__link:hover .nav__icon,
     .active-nav .nav__icon{

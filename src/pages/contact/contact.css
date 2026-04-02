@@ -1,7 +1,7 @@
 .btn:hover{
     background: #fff;
-    color: var(--fist-color);
-    border: 2px solid var(--fist-color);
+    color: var(--first-color);
+    border: 2px solid var(--first-color);
 }
 ::placeholder{
     color: rgb(0,109,164);
@@ -10,6 +10,6 @@
     transition: all 0.3s ease;
 }
 .contact_social-link:hover{
-    background-color: var(--fist-color);
+    background-color: var(--first-color);
     color:var(--text-white)
 }

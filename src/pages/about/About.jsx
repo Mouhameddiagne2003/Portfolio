@@ -11,7 +11,7 @@ import ComputersCanvas from "../../components/Computer/Computers.jsx";
 import Experiences from "../../components/Experiences/Experiences.jsx";
 import Services from "../../components/Services/Services.jsx";
 import {Link} from 'react-router-dom';
-import Cv from '../../assets/Mouhamed-DIAGNE-CV-Octobre24.pdf';
+import Cv from '../../assets/MouhamedDIAGNE-CV.pdf';
 
 
 const About = () => {

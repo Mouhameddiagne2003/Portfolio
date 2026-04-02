@@ -256,7 +256,7 @@ export const resume = [
 ];
 import { FaHtml5, FaPhp,FaFigma,FaJava, FaAngular, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaLinux } from 'react-icons/fa';
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
-import { SiMongodb, SiMysql, SiUml, SiCanva } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiUml, SiCanva, SiNextdotjs, SiSupabase } from 'react-icons/si';
 
 export const techskills = [
   {
@@ -387,7 +387,22 @@ export const techskills = [
     logo: FaFigma,
     level: "Beginner"
   },
-
+  {
+    id: 17,
+    title: 'Next JS',
+    color: '#000000',
+    percentage: '60',
+    logo: SiNextdotjs,
+    level: "Intermediate"
+  },
+  {
+    id: 18,
+    title: 'Supabase',
+    color: '#3ECF8E',
+    percentage: '55',
+    logo: SiSupabase,
+    level: "Intermediate"
+  },
 ];
 
 export const profskills = [

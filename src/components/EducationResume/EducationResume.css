@@ -14,7 +14,7 @@
     position: relative;
 }
 .title span {
-    color: var(--fist-color);
+    color: var(--first-color);
     font-family: var(--body-font), serif;
     font-size: var(--small-font-size);
     font-weight: var(--weight-600);

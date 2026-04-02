@@ -8,7 +8,7 @@
     padding: 10px 20px;
     font-size: 18px;
     color: white;
-    background-color: var(--fist-color);
+    background-color: var(--first-color);
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -16,7 +16,7 @@
 
 .portfolio-link:hover {
     background-color: white;
-    color:var(--fist-color);
+    color:var(--first-color);
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
 }

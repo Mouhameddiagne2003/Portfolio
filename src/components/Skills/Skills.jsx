@@ -29,7 +29,7 @@ function Skills() {
 
                                                                              pathColor: color,
                                                                              backgroundColor: "var(--container-color)",
-                                                                             textColor: "var(--fist-color)",
+                                                                             textColor: "var(--first-color)",
                                                                              trailColor: "transparent"
 
                                                                          })} value={percentage} strokeWidth={7.5}>
@@ -67,7 +67,7 @@ function Skills() {
                                                                          styles={buildStyles({
                                                                              textColor: "var(--title-color)",
                                                                              trailColor: "transparent",
-                                                                             pathColor: "var(--fist-color)"
+                                                                             pathColor: "var(--first-color)"
                                                                          })} value={percentage} strokeWidth={7.5}>
                                         </CircularProgressbar>
                                     </div>

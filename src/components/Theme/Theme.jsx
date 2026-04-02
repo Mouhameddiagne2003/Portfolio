@@ -42,7 +42,7 @@ function Theme(props) {
 
 
     useEffect(() => {
-        document.documentElement.style.setProperty('--fist-color',color);
+        document.documentElement.style.setProperty('--first-color',color);
         localStorage.setItem('color',color);
     }, [color]);
 

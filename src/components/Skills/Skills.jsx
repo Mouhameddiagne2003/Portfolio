@@ -35,7 +35,7 @@ function Skills() {
                                                                          })} value={percentage} strokeWidth={7.5}>
                                             <div
                                                 className={`text-6xl flex items-center justify-center ${hoveredSkill === index ? 'animate-flip' : ''} `}>
-                                                <Icone className="h-14 w-14" style={color = {color}}/>
+                                                <Icone className="h-14 w-14" style={{ color }}/>
                                             </div>
                                             <div
                                                 className={`text-titleColor text-sm ${hoveredSkill === index ? 'animate-fade-in opacity-1' : 'hidden'}`}>

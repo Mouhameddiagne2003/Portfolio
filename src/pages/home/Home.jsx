@@ -48,8 +48,8 @@ const Home = () => {
                     </p>
                     <div className="wrapper">
 
-                            <Link className="gap-2.5 flex items-center md:w-1/3 link_wrapper" to="/about">
-                                <a className=  {`${padding}`}  >{t("More") + " "}</a>
+                            <Link className={`gap-2.5 flex items-center md:w-1/3 link_wrapper ${padding}`} to="/about">
+                                {t("More") + " "}
                                 {/*<span className="button__icon">*/}
                                 {/*    <FaArrowRight/>*/}
                                 {/*</span>*/}

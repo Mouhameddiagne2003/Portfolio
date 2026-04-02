@@ -13,7 +13,7 @@
   "Description": "I'm a passionate Senegalese web developer who specialises in creating bespoke digital solutions. My commitment is to transform your ideas into elegant and functional digital realities, always putting the user at the centre of my concerns",
   "More": "More About Me",
   "IntroTitle": "My introduction",
-  "IntroductionText": "Hello ! My name is Mouhamed DIAGNE, I'm 21 years old and I'm a student software engineer at ESP DAKAR based in Senegal. With a solid background in web and mobile application development, as well as knowledge in application security, I'm dedicated to creating secure and high-performance software solutions to meet the unique needs of my clients.What motivates me is the challenge of transforming ideas into functional and impactful applications while ensuring their security and performance. I firmly believe in the power of collaboration, meticulous attention to detail and an unwavering commitment to code quality and security. Feel free to explore my portfolio to discover some of the projects I've worked on, and don't hesitate to contact me if you'd like to collaborate!",
+  "IntroductionText": "Hello ! I'm Mouhamed DIAGNE, I'm {{age}} years old and I'm a software engineering student at <a href=\"https://www.esp.sn\" class=\"text-blue-600 hover:text-blue-800\"> DAKAR ESP </a> based in Senegal. With a solid background in web and mobile application development, as well as knowledge of application security, I'm dedicated to creating secure, high-performance software solutions to meet my customers' unique needs.What motivates me is the challenge of transforming ideas into functional, impactful applications while ensuring their security and performance. I firmly believe in the power of collaboration, meticulous attention to detail and an unwavering commitment to code quality and security. Feel free to explore my portfolio to discover some of the projects I've worked on, and don't hesitate to contact me if you'd like to collaborate !",
   "SkillsTitle": "My Skills",
   "TechnicalSkills": "Technical Skills",
   "Beginner": "Beginner",
@@ -87,8 +87,17 @@
   "subject": "Subject",
   "sendmess": "Send Message",
   "explore": "Explore my portfolio",
-  "exploretext": " Over the years, I've had the privilege of working on a variety of projects that have enabled me to put into practice and perfect my skills. From conception to completion, each project has been an opportunity to learn and grow. I invite you to discover my portfolio, where you'll find a selection of my most recent work."
-
-
-
+  "exploretext": " Over the years, I've had the privilege of working on a variety of projects that have enabled me to put into practice and perfect my skills. From conception to completion, each project has been an opportunity to learn and grow. I invite you to discover my portfolio, where you'll find a selection of my most recent work.",
+  "Ayweu1stPoint": "Implementation of delivery services in Senegal (Dakar, Saint-Louis) and internationally (Gambia).",
+  "Ayweu2ndPoint": "Integration of external APIs (WhatsApp Business, Mail, Paydunya) via Node.js.",
+  "Ayweu3rdPoint": "Automation of business workflows using ActivePieces.",
+  "Ayweu4thPoint": "Overall improvement of the performance and security of the Ayweu platform.",
+  "Awa1stPoint": "Development of automated payment solutions on WhatsApp via Wave and Orange Money.",
+  "Awa2ndPoint": "Design of automated accounting transfer engines complying with SAGE and SYSCOHADA plans.",
+  "DesignerWebDeveloper": "Designer && FullStack Web Developer",
+  "SoftwareDeveloperIntern": "Software Developer Intern",
+  "portfoliotitle6": "Waxtaan (WhatsApp Clone)",
+  "portfoliodesc6": "Development of an instant messaging platform inspired by WhatsApp, with a robust architecture using Next.js and SpringBoot. Real-time message management and security integration.",
+  "portfoliotitle7": "Data-Eval (AI DB Evaluation)",
+  "portfoliodesc7": "Design of an automatic database evaluation and correction framework, using artificial intelligence (DeepSeek) to analyze structure and SQL queries."
 }

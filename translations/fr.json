@@ -13,7 +13,7 @@
   "Description": "Je suis un développeur web sénégalais passionné, spécialisé dans la création de solutions numériques sur mesure.     Mon engagement est de transformer vos idées en réalités numériques élégantes et fonctionnelles, en mettant toujours l'utilisateur au centre de mes préoccupations",
   "More": "En savoir plus",
   "IntroTitle": "Mon introduction",
-  "IntroductionText": "Bonjour ! Je suis Mouhamed DIAGNE, j'ai 21 ans et suis un élève ingénieur logiciel à <a href=\"https://www.esp.sn\" class=\"text-blue-600 hover:text-blue-800\"> l'ESP de DAKAR </a> basé au Sénégal. Avec une solide expérience en développement d'applications web et mobiles, ainsi qu'une connaissance en sécurité des applications, je me consacre à créer des solutions logicielles sécurisées et performantes pour répondre aux besoins uniques de mes clients.Ce qui me motive, c'est le défi de transformer des idées en applications fonctionnelles et impactantes tout en assurant leur sécurité et leur performance. Je crois fermement en la puissance de la collaboration, l'attention méticuleuse aux détails et un engagement inébranlable envers la qualité du code et la sécurité. N'hésitez pas à explorer mon portfolio pour découvrir certains des projets sur lesquels j'ai travaillé, et n'hésitez pas à me contacter si vous souhaitez collaborer !",
+  "IntroductionText": "Bonjour ! Je suis Mouhamed DIAGNE, j'ai {{age}} ans et suis un élève ingénieur logiciel à <a href=\"https://www.esp.sn\" class=\"text-blue-600 hover:text-blue-800\"> l'ESP de DAKAR </a> basé au Sénégal. Avec une solide expérience en développement d'applications web et mobiles, ainsi qu'une connaissance en sécurité des applications, je me consacre à créer des solutions logicielles sécurisées et performantes pour répondre aux besoins uniques de mes clients.Ce qui me motive, c'est le défi de transformer des idées en applications fonctionnelles et impactantes tout en assurant leur sécurité et leur performance. Je crois fermement en la puissance de la collaboration, l'attention méticuleuse aux détails et un engagement inébranlable envers la qualité du code et la sécurité. N'hésitez pas à explorer mon portfolio pour découvrir certains des projets sur lesquels j'ai travaillé, et n'hésitez pas à me contacter si vous souhaitez collaborer !",
   "Experience": "Années d'expérience",
   "Projects":"Projets réalisés",
   "Works": "Entreprises",
@@ -90,10 +90,17 @@
   "subject": "Objet",
   "sendmess": "Envoyer Message",
   "explore": "Explorer mon portfolio",
-  "exploretext": " Au fil des années, j'ai eu le privilège de travailler sur divers projets qui m'ont permis de mettre en pratique et de perfectionner mes compétences. De la conception à la réalisation, chaque projet a été une opportunité d'apprentissage et de croissance. Je vous invite à découvrir mon portfolio, où vous trouverez une sélection de mes travaux les plus récents."
-
-
-
-
-
+  "exploretext": " Au fil des années, j'ai eu le privilège de travailler sur divers projets qui m'ont permis de mettre en pratique et de perfectionner mes compétences. De la conception à la réalisation, chaque projet a été une opportunité d'apprentissage et de croissance. Je vous invite à découvrir mon portfolio, où vous trouverez une sélection de mes travaux les plus récents.",
+  "Ayweu1stPoint": "Mise en œuvre de services de livraison au Sénégal (Dakar, Saint-Louis) et à l’international (Gambie).",
+  "Ayweu2ndPoint": "Intégration d’API externes (WhatsApp Business, Mail, Paydunya) via Node.js.",
+  "Ayweu3rdPoint": "Automatisation de workflows métiers à l’aide d’ActivePieces.",
+  "Ayweu4thPoint": "Amélioration des performances et de la sécurité de la plateforme Ayweu.",
+  "Awa1stPoint": "Développement de solutions de paiement automatisées sur WhatsApp via Wave et Orange Money.",
+  "Awa2ndPoint": "Conception de moteurs de virements comptables automatisés respectant les plans SAGE et SYSCOHADA.",
+  "DesignerWebDeveloper": "Designer && Développeur Web FullStack",
+  "SoftwareDeveloperIntern": "Stagiaire Alternant Développeur Logiciel",
+  "portfoliotitle6": "Waxtaan (Clone WhatsApp)",
+  "portfoliodesc6": "Développement d’une plateforme de messagerie instantanée inspirée de WhatsApp, avec une architecture robuste utilisant Next.js et SpringBoot. Gestion des messages en temps réel et intégration de la sécurité.",
+  "portfoliotitle7": "Data-Eval (Évaluation DB par IA)",
+  "portfoliodesc7": "Conception d’un framework d’évaluation et de correction automatique de bases de données, utilisant l’intelligence artificielle (DeepSeek) pour analyser la structure et les requêtes SQL."
 }

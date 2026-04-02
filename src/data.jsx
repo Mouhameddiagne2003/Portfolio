@@ -14,6 +14,9 @@ import Work2 from './assets/maternity.jpg';
 import Work3 from './assets/spadon.jpg';
 import Work4 from './assets/c.png';
 import Work5 from './assets/donnees.png';
+import Work6 from './assets/waxtaan.png';
+import Work7 from './assets/data_eval.png';
+import Work8 from './assets/waxtaan_splash.png';
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -61,14 +64,14 @@ export const links = [
 export const stats = [
   {
     id: 1,
-    no: '12+',
+    no: '3+',
     title: 'Years of <br /> Experience',
   },
 
   {
     id: 2,
-    no: '97+',
-    title: 'Completed <br /> Projects',
+    no: '4+',
+    title: 'Companies <br /> Worked',
   },
 
   {
@@ -109,7 +112,33 @@ export const Educationresume = [
     ]
 import nandigium from "../src/assets/nandigium_consulting_logo.jpeg";
 import feindy from "../src/assets/feindy.jpg"
+import awa from "./assets/awa_logo.png";
+import ayweu from "./assets/ayweu_logo.png";
 export const experiences = [
+  {
+    title: "SoftwareDeveloperIntern",
+    company_name: "Awa Africa",
+    icon: awa,
+    iconBg: "#FFFFFF",
+    date: "Août 2025 - Présent",
+    points: [
+      "Awa1stPoint",
+      "Awa2ndPoint"
+    ],
+  },
+  {
+    title: "DesignerWebDeveloper",
+    company_name: "Ayweu",
+    icon: ayweu,
+    iconBg: "#FFFFFF",
+    date: "Mars 2025 - Août 2025",
+    points: [
+      "Ayweu1stPoint",
+      "Ayweu2ndPoint",
+      "Ayweu3rdPoint",
+      "Ayweu4thPoint"
+    ],
+  },
   {
     title: "CybersecurityAssistant",
     company_name: "Nandigium Consulting",
@@ -256,7 +285,7 @@ export const resume = [
 ];
 import { FaHtml5, FaPhp,FaFigma,FaJava, FaAngular, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaLinux } from 'react-icons/fa';
 import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
-import { SiMongodb, SiMysql, SiUml, SiCanva, SiNextdotjs, SiSupabase } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiUml, SiCanva, SiNextdotjs, SiSupabase, SiSpringboot, SiPostgresql, SiTypescript } from 'react-icons/si';
 
 export const techskills = [
   {
@@ -403,6 +432,30 @@ export const techskills = [
     logo: SiSupabase,
     level: "Advanced"
   },
+  {
+    id: 19,
+    title: 'SpringBoot',
+    color: '#6DB33F',
+    percentage: '65',
+    logo: SiSpringboot,
+    level: "Intermediate"
+  },
+  {
+    id: 20,
+    title: 'PostgreSQL',
+    color: '#336791',
+    percentage: '70',
+    logo: SiPostgresql,
+    level: "Advanced"
+  },
+  {
+    id: 21,
+    title: 'TypeScript',
+    color: '#3178C6',
+    percentage: '75',
+    logo: SiTypescript,
+    level: "Advanced"
+  },
 ];
 
 export const profskills = [
@@ -425,6 +478,56 @@ export const profskills = [
   ]
 
 export const portfolio = [
+  {
+    id: 6,
+    img: Work8,
+    title: 'portfoliotitle6',
+    desc :'portfoliodesc6',
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "springboot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/Mouhameddiagne2003/Waxtaan-back"
+  },
+  {
+    id: 7,
+    img: Work7,
+    title: 'portfoliotitle7',
+    desc: 'portfoliodesc7',
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "blue-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/Mouhameddiagne2003/data-eval-back"
+  },
   {
     id: 1,
     img: Work1,

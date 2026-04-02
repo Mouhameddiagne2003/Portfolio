@@ -3,7 +3,7 @@ import "./about.css";
 import {useTranslation} from "react-i18next";
 import Odometer from "react-odometerjs";
 import { TbFileDownload } from "react-icons/tb";
-import aboutImg from "../../assets/me.jpg";
+import aboutImg from "../../assets/about_photo.jpg";
 import Skills from "../../components/Skills/Skills.jsx";
 import {Educationresume} from "../../data.jsx";
 import EducationResume from "../../components/EducationResume/EducationResume.jsx";
@@ -17,12 +17,24 @@ import Cv from '../../assets/MouhamedDIAGNE-CV.pdf';
 const About = () => {
     const {t,i18n } = useTranslation();
 
+    const calculateAge = (birthDate) => {
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    };
+
+    const age = calculateAge(new Date(2003, 4, 3));
+
     const firstHalfEn = "Me";
     const firstHalfFr = "A";
     const info = [
-        {text: t("Experience"), count: "02", code: "Experience"},
+        {text: t("Experience"), count: "03", code: "Experience"},
         {text: t("Projects"), count: "10", code: "Project"},
-        {text: t("Works"), count: "03", code:"Work"},
+        {text: t("Works"), count: "04", code:"Work"},
     ]
     const [Experience, SetExperience] = useState(0);
     const [Work, SetWork] = useState(0);
@@ -77,7 +89,7 @@ const About = () => {
                         <div className="p-2">
                             <div className="text-textColor font-normal text-lg my-3 ">
                                 <p className="leading-8 text-justify w-11/12 mx-auto"
-                                   dangerouslySetInnerHTML={{__html: t("IntroductionText")}}/>
+                                   dangerouslySetInnerHTML={{__html: t("IntroductionText", { age })}}/>
                                 <div id="mon-element" className="flex mt-10 items-center justify-center gap-7 ">
                                     {
                                         info.map(content =>

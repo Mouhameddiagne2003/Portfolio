@@ -14,6 +14,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { personalInfo, stats } from '../../data.jsx';
 import AcidSquares from '../ui/AcidSquares.jsx';
 import ShinyText from '../ui/ShinyText.jsx';
+import TargetCursor from '../ui/TargetCursor.jsx';
 
 // Animated Counter Component that re-triggers on scroll into view
 function AnimatedCounter({ value, suffix = "" }) {
@@ -51,6 +52,14 @@ export default function Hero() {
 
   return (
     <section className="relative isolate min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor
+        parallaxOn
+        hoverDuration={0.2}
+        cursorColor="#ffffff"
+        cursorColorOnTarget="#B497CF"
+      />
       
       {/* React Bits AcidSquares WebGL Background */}
       <div className="absolute inset-0 z-0 w-full h-full opacity-45 dark:opacity-60">
@@ -157,7 +166,7 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-xs font-bold hover:bg-slate-800 dark:hover:bg-white transition-all shadow-md group"
+                className="cursor-target inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-xs font-bold hover:bg-slate-800 dark:hover:bg-white transition-all shadow-md group"
               >
                 {t("hero.ctaProjects")}
                 <FaArrowRight className="text-[10px] group-hover:translate-x-1 transition-transform" />
@@ -166,7 +175,7 @@ export default function Hero() {
               <a
                 href={personalInfo.cvFile}
                 download="Mouhamed-DIAGNE-CV.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 text-slate-800 dark:text-zinc-200 font-mono text-xs font-semibold hover:border-slate-400 dark:hover:border-zinc-600 transition-all shadow-sm"
+                className="cursor-target inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 text-slate-800 dark:text-zinc-200 font-mono text-xs font-semibold hover:border-slate-400 dark:hover:border-zinc-600 transition-all shadow-sm"
               >
                 <FaDownload className="text-xs" />
                 {t("hero.ctaResume")}
@@ -174,7 +183,7 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-zinc-300 hover:text-slate-950 dark:hover:text-white font-mono text-xs font-medium transition-colors"
+                className="cursor-target inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-zinc-300 hover:text-slate-950 dark:hover:text-white font-mono text-xs font-medium transition-colors"
               >
                 {t("hero.ctaContact")} ↘
               </a>

@@ -1,106 +1,248 @@
 {
-  "Home" : "Acceuil",
-  "About": "Propos",
-  "Portfolio": "Portfolio",
-  "Contact": "Contact",
-  "Welcome": "Bienvenue dans mon monde",
-  "HomeTitle": "Bonjour \uD83D\uDC4B, Je suis Mouhamed DIAGNE.",
-  "JobTitle1": "Développeur FullStack",
-  "JobTitle2": "DevOps Junior",
-  "JobTitle3": "Amoureux de Java",
-  "JobTitle4": "Passioné de Réseaux",
-  "JobTitle5": "Passionné de CyberSécurité",
-  "Description": "Je suis un développeur web sénégalais passionné, spécialisé dans la création de solutions numériques sur mesure.     Mon engagement est de transformer vos idées en réalités numériques élégantes et fonctionnelles, en mettant toujours l'utilisateur au centre de mes préoccupations",
-  "More": "En savoir plus",
-  "IntroTitle": "Mon introduction",
-  "IntroductionText": "Bonjour ! Je suis Mouhamed DIAGNE, j'ai {{age}} ans et suis un élève ingénieur logiciel à <a href=\"https://www.esp.sn\" class=\"text-blue-600 hover:text-blue-800\"> l'ESP de DAKAR </a> basé au Sénégal. Avec une solide expérience en développement d'applications web et mobiles, ainsi qu'une connaissance en sécurité des applications, je me consacre à créer des solutions logicielles sécurisées et performantes pour répondre aux besoins uniques de mes clients.Ce qui me motive, c'est le défi de transformer des idées en applications fonctionnelles et impactantes tout en assurant leur sécurité et leur performance. Je crois fermement en la puissance de la collaboration, l'attention méticuleuse aux détails et un engagement inébranlable envers la qualité du code et la sécurité. N'hésitez pas à explorer mon portfolio pour découvrir certains des projets sur lesquels j'ai travaillé, et n'hésitez pas à me contacter si vous souhaitez collaborer !",
-  "Experience": "Années d'expérience",
-  "Projects":"Projets réalisés",
-  "Works": "Entreprises",
-  "SkillsTitle": "Mes Compétences",
-  "TechnicalSkills": "Compétences Techniques",
-  "Beginner": "Débutant",
-  "Intermediate": "Intermédiaire",
-  "Advanced": "Avancé",
-  "ProfessionalSkills": "Compétences Professionnelles",
-  "Creativity": "Creativité",
-  "ProblemSolving": "Résolution de Problèmes",
-  "Communication": "Communication",
-  "Teamwork": "Travail d'Equipe",
-  "Education&ExperienceTitle": "Education & Expérience",
-  "Learnmore": "En savoir plus",
-  "ConcepteurTitle": "Concepteur d'applications",
-  "WebDeveloper": "Développeur web",
-  "MobileDeveloper": "Développeur mobile",
-  "WhatIs": "Qu'est ce qu'un ",
-  "conceptdesc": "En tant que concepteur d'applications, je m'assure que chaque projet démarre avec une fondation solide. Cela inclut l'analyse des besoins, la création des spécifications techniques, et la planification architecturale. Le Concepteur d'applications web et mobile se tient à la confluence du design et du développement, créant des solutions interactives qui améliorent l'expérience utilisateur sur les navigateurs et appareils mobiles.",
-  "webdevdesc": "En tant que développeur web, j'assure le développement d'applications interactives qui fonctionnent de manière fluide sur divers navigateurs et systèmes, en m'appuyant sur des technologies modernes.",
-  "mobdevdesc": "Le développeur mobile est à l'intersection des interfaces utilisateur et de la performance. Il développe des applications robustes pour les plateformes mobiles, offrant une expérience utilisateur exceptionnelle.",
-  "desdesc": "En tant que designer, je suis chargé de concevoir des interfaces visuelles attrayantes et fonctionnelles, tout en veillant à l'identité visuelle de la marque et à la qualité de l'expérience utilisateur.",
-  "ServiceA1fstPoint": "Analyse des besoins clients",
-  "ServiceA2ndPoint": "Rédaction des spécifications techniques",
-  "ServiceA3rdPoint": "Planification architecturale",
-  "ServiceA4thPoint": "Conception Interactive",
-  "ServiceB1fstPoint": "Développement réactif && dev frontend-backend",
-  "ServiceB2ndPoint": "Optimisation des performances",
-  "ServiceB3rdPoint": "Sécurisation des Données",
-  "ServiceB4thPoint": "Intégration d'API",
-  "ServiceC1fstPoint": "Développement cross-platform ",
-  "ServiceC2ndPoint": "Performance et optimisation ",
-  "ServiceC3rdPoint": "Intégration de fonctionnalités natives",
-  "ServiceC4thPoint": "Mise en place d'une interface intuitive",
-  "ServiceD1fstPoint": "Conception de logos, d'affiches et de supports visuels ",
-  "ServiceD2ndPoint": "Design UX/UI ",
-  "ServiceD3rdPoint": "Respect de l'identité de marque ",
-  "ServiceD4thPoint": "Design responsive ",
-  "WhatIProvide": "Ce Que Je Fournis",
-  "ServicesTitle": "Mes services",
-  "MonParcoursAcademique": "Mon Parcours Académique",
-  "What I have done so far": "Ce que j'ai fait jusqu'à présent",
-  "Work Experience": "Expérience Professionnelle",
-  "CybersecurityAssistant": "Assistant Cybersécurité",
-  "FrontDeveloper": "Développeur Frontend",
-  "Nandigium1fstPoint": "Concepts Cybersécurité ( disponibilité, intégrité, confidentialité & preuves )",
-  "Nandigium2ndPoint": "Normes ISO 27001",
-  "Nandigium3rdPoint": "Création d'une architecture réseau sécurisée pour l'entreprise",
-  "Feindy1fstPoint": "Développement d'un site web d'envoi de messages aux clients de l'entreprise de type Mail, whatsApp et SMS",
-  "Feindy2ndPoint": "Développement frontend avec Java Server Pages (jsp), Css, Js, JQuery ...",
-  "Feindy3rdPoint": "Développement backend avec JavaEE (j2ee), Mysql comme base de données",
-  "Feindy4thPoint": "ntégration d'API telles que JavaMail pour l'envoi de mails via le serveur SMTP de Google, l'API WhatsApp de Meta pour la gestion des messages WhatsApp, ainsi que l'utilisation de CronJobs pour l'automatisation des envois... ",
-  "Spadon1fstPoint": "Refonte du site web de Spadon",
-  "Spadon2ndPoint": "Utilisation de Full JavaScript pour les pages HTML : Création de pages dynamiques entièrement générées avec JavaScript, sans générateurs de templates, tout en intégrant des styles personnalisés en CSS pour une mise en page fluide et responsive.",
-  "portfoliotitle1": "Système de suivi du rythme cardiaque à distance pour les personnes âgées",
-  "portfoliodesc1": "Pour ce projet, j'ai développé un système de surveillance à distance du rythme cardiaque spécialement conçu pour les personnes âgées, permettant de visualiser l'ECG du patient en temps réel. Le système repose sur une architecture MERN Stack (MongoDB, Express, React, Node.js) pour le traitement et l'affichage des données, ainsi que sur le protocole MQTT pour la communication entre les capteurs et le serveur. Les capteurs utilisés incluent le DHT11 pour la mesure de la température et de l'humidité, et l'AD8232 pour la capture des signaux ECG, tous connectés via un module ESP32. L'application offre une interface utilisateur intuitive développée avec React, permettant une surveillance en temps réel des données physiologiques à travers un tableau de bord interactif. En plus de la visualisation continue des données ECG, le système est doté d'un mécanisme d'alerte en cas d'anomalies détectées dans les données recueillies, garantissant ainsi une intervention rapide en cas de problème. Grâce au protocole MQTT, les informations des capteurs sont transmises de manière fluide et efficace vers le serveur, assurant une communication stable et fiable. Ce projet vise à améliorer la qualité de vie des personnes âgées en leur offrant une surveillance médicale à distance, tout en facilitant l'accès des professionnels de santé à des données précises et actualisées. Voici une vidéo youtube pour plus d'informations sur le projet: <a style={{ color: 'var(--fist-color)' }}  href=\"https://youtu.be/DiDXGserTGM\" target=\"_blank\"> Lien Youtube </a> ",
-  "portfoliotitle2": "Gestion de maternité",
-  "portfoliodesc2": "Le projet de gestion pour une maternité est une application web en cours de développement, conçue pour optimiser la gestion des patientes et la gestion des naissances. En utilisant le MERN Stack, qui combine MongoDB, Express, React et Node.js, ce système offre une interface intuitive et réactive, permettant aux utilisateurs de naviguer facilement entre les différentes fonctionnalités. Les principales fonctionnalités incluent une authentification sécurisée pour le personnel médical, garantissant que seuls les utilisateurs autorisés peuvent accéder aux données sensibles. Un tableau de bord administrateur est également mis en place pour une gestion efficace des dossiers des patients, avec la possibilité de consulter et de modifier les informations médicales, ainsi que de suivre les naissances en temps réel. En outre, le système permettra de gérer les comptes des membres du personnel, assurant une administration fluide et centralisée des opérations de la maternité. En intégrant ces fonctionnalités, ce projet vise à améliorer la qualité des soins offerts aux patientes et à simplifier les processus administratifs, contribuant ainsi à un environnement de travail plus efficace pour le personnel médical.",
-  "portfoliotitle3": "Application d'Envoi de Messages Automatiques pour Les Clients de SPADON",
-  "portfoliodesc3": "Le projet d'application d'envoi de messages automatiques permet aux entreprises d'optimiser leur communication avec les clients via des messages de type e-mail et WhatsApp. Construit avec Java EE, cette application utilise des tâches cron pour l'exécution automatique des classes, garantissant que les messages sont envoyés de manière régulière et sans intervention manuelle. Pour l'envoi d'e-mails, l'application intègre l'API SMTP de Google, assurant une délivrabilité fiable et sécurisée des communications par e-mail. En parallèle, elle utilise l'API WhatsApp de Meta for Developers pour faciliter l'envoi de messages WhatsApp, permettant aux entreprises de toucher leurs clients sur la plateforme de messagerie la plus populaire. La sécurité est une priorité dans ce projet ; ainsi, nous avons mis en place des mesures de sécurité robustes, tant au niveau de l'application qu'au niveau de Tomcat, garantissant que toutes les communications sont protégées contre les accès non autorisés. Grâce à cette application, les entreprises peuvent automatiser leurs interactions, améliorer l'engagement client et optimiser leur processus de communication tout en assurant un haut niveau de sécurité.",
-  "portfoliotitle4": "Évaluation d'Expressions Arithmétiques en C (Grammaire BNF)",
-  "portfoliodesc4": "Le projet d'évaluation d'expressions arithmétiques est une application développée en langage C, visant à implémenter un système capable d\\'analyser et de calculer des expressions arithmétiques tout en respectant la grammaire Backus-Naur Form (BNF). Ce système est conçu pour interpréter les expressions de manière précise et efficace, garantissant une évaluation correcte des opérations. Les principales fonctionnalités de cette application incluent une analyse syntaxique robuste des expressions, permettant d\\'identifier et de traiter les différentes composantes arithmétiques. Le calcul des expressions est effectué en suivant la priorité des opérateurs, ce qui assure que les opérations sont exécutées dans le bon ordre. De plus, le système inclut une gestion efficace des erreurs de syntaxe, permettant à l'utilisateur de recevoir des messages clairs en cas d'entrées invalides. Ce projet, déjà achevé, démontre une approche structurée et méthodique dans le traitement des expressions arithmétiques, offrant ainsi une base solide pour toute application nécessitant des calculs complexes.",
-  "portfoliotitle5": "Refonte du Site Web de Spadon",
-  "portfoliodesc5": "Le projet de refonte du site web de Spadon est actuellement en cours, visant à moderniser l'interface et à améliorer l'expérience utilisateur. Pour ce faire, nous utilisons une approche Full JavaScript pour le développement des pages HTML, en créant un framework personnalisé adapté aux besoins spécifiques de Spadon. Cette refonte implique la restructuration complète du site, permettant une navigation fluide et intuitive, tout en intégrant des fonctionnalités modernes et réactives. Le choix d’un framework personnalisé nous permet de concevoir des solutions sur mesure, optimisées pour la performance et la convivialité, tout en garantissant une meilleure interactivité pour les utilisateurs.",
-  "letstalk": "Parlons",
-  "aboutyour": "De Votre",
-  "nextproject": "Prochain Projet",
-  "getintouch": "Prendre Contact",
-  "letsdiscuss": "Discutons de votre projet",
-  "always": "Disponible pour discuter de projets de développement web & mobile",
-  "partner": "les travaux de conception ou les partenariats",
-  "name": "Prénom & Nom",
-  "subject": "Objet",
-  "sendmess": "Envoyer Message",
-  "explore": "Explorer mon portfolio",
-  "exploretext": " Au fil des années, j'ai eu le privilège de travailler sur divers projets qui m'ont permis de mettre en pratique et de perfectionner mes compétences. De la conception à la réalisation, chaque projet a été une opportunité d'apprentissage et de croissance. Je vous invite à découvrir mon portfolio, où vous trouverez une sélection de mes travaux les plus récents.",
-  "Ayweu1stPoint": "Mise en œuvre de services de livraison au Sénégal (Dakar, Saint-Louis) et à l’international (Gambie).",
-  "Ayweu2ndPoint": "Intégration d’API externes (WhatsApp Business, Mail, Paydunya) via Node.js.",
-  "Ayweu3rdPoint": "Automatisation de workflows métiers à l’aide d’ActivePieces.",
-  "Ayweu4thPoint": "Amélioration des performances et de la sécurité de la plateforme Ayweu.",
-  "Awa1stPoint": "Développement de solutions de paiement automatisées sur WhatsApp via Wave et Orange Money.",
-  "Awa2ndPoint": "Conception de moteurs de virements comptables automatisés respectant les plans SAGE et SYSCOHADA.",
-  "DesignerWebDeveloper": "Designer && Développeur Web FullStack",
-  "SoftwareDeveloperIntern": "Stagiaire Alternant Développeur Logiciel",
-  "portfoliotitle6": "Waxtaan (Clone WhatsApp)",
-  "portfoliodesc6": "Développement d’une plateforme de messagerie instantanée inspirée de WhatsApp, avec une architecture robuste utilisant Next.js et SpringBoot. Gestion des messages en temps réel et intégration de la sécurité.",
-  "portfoliotitle7": "Data-Eval (Évaluation DB par IA)",
-  "portfoliodesc7": "Conception d’un framework d’évaluation et de correction automatique de bases de données, utilisant l’intelligence artificielle (DeepSeek) pour analyser la structure et les requêtes SQL."
+  "nav": {
+    "about": "À Propos",
+    "experience": "Expériences",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "resume": "CV"
+  },
+  "hero": {
+    "badge": "Disponible pour de nouvelles opportunités",
+    "role": "Ingénieur Logiciel & Développeur Full-Stack",
+    "subtitle": "Conception de plateformes web, API et systèmes métiers avec une approche orientée performance, intégration et sécurité.",
+    "ctaProjects": "Explorer mes projets",
+    "ctaContact": "Me contacter",
+    "ctaResume": "Télécharger mon CV",
+    "copyEmail": "Copier l'email",
+    "copied": "Email copié dans le presse-papier !",
+    "status": "Basé à Dakar, Sénégal • Ouvert au Remote & International"
+  },
+  "stats": {
+    "yearsExperience": "Années d'expérience",
+    "projectsDelivered": "Projets réalisés",
+    "companiesWorked": "Entreprises accompagnées",
+    "commitment": "Engagement & Rigueur"
+  },
+  "bento": {
+    "title": "À Propos",
+    "subtitle": "Un profil d'ingénieur alliant vision système, rigueur technique et sens du produit.",
+    "academicTitle": "Formation Académique d'Élite",
+    "academicText": "Diplôme d'Ingénieur de Conception en Génie Informatique (DIC) à l'École Supérieure Polytechnique de Dakar (ESP), précédé d'un DUT Informatique et d'un Baccalauréat Scientifique S2 Mention Bien.",
+    "card1Title": "Ingénierie Logicielle & Systèmes Métiers",
+    "card1Text": "Je conçois et développe des applications web, des API et des systèmes métiers en combinant développement frontend et backend, gestion des données, intégration de services et automatisation. Mon parcours m’a amené à travailler sur des problématiques variées, de la conception d’applications web et de plateformes métiers à l’intégration de services externes et de solutions de paiement. Je m’intéresse particulièrement à la conception de systèmes fiables, évolutifs et sécurisés, avec une volonté croissante d’approfondir le Cloud et le DevSecOps.",
+    "card2Title": "FinTech & Intégration de services",
+    "card2Text": "Expérience dans la conception de solutions métier et l’intégration de services externes, notamment autour des paiements en ligne, de la messagerie et de l’automatisation des processus financiers.",
+    "card3Title": "IA & Technologies émergentes",
+    "card3Text": "J’explore l’IA générative, le Cloud et l’IoT à travers différents projets, avec un intérêt particulier pour l’automatisation, l’analyse intelligente des données et les systèmes connectés.",
+    "card4Title": "Sécurité & Architecture",
+    "card4Text": "Sensibilité accrue aux enjeux de sécurité, de fiabilité et d’évolutivité dans la conception des architectures applicatives modernes."
+  },
+  "edu": {
+    "title": "Formation Académique",
+    "dic": {
+      "degree": "Diplôme d'Ingénieur de Conception (DIC) — Génie Informatique",
+      "school": "École Supérieure Polytechnique de Dakar (ESP)",
+      "desc": "Formation d'ingénieur en conception logicielle, architectures distribuées, bases de données avancées, réseaux télécoms, sécurité et leadership technique."
+    },
+    "dut": {
+      "degree": "DUT Informatique",
+      "school": "École Supérieure Polytechnique de Dakar (ESP)",
+      "desc": "Bases approfondies en algorithmique, programmation orientée objet (Java, C++), réseaux, systèmes d'exploitation et modélisation UML."
+    },
+    "bac": {
+      "degree": "Baccalauréat Scientifique (S2) — Mention Bien",
+      "school": "Lycée d'Excellence Privé Birago Diop",
+      "desc": "Filière scientifique d'excellence, bases mathématiques et physiques rigoureuses."
+    }
+  },
+  "exp": {
+    "title": "Expériences Professionnelles",
+    "subtitle": "Mon parcours au sein d'entreprises innovantes et de plateformes à fort impact.",
+    "type": {
+      "internship": "Stage / Alternance",
+      "contract": "Mission / Freelance"
+    },
+    "awa": {
+      "role": "Stagiaire Alternant — Développeur Logiciel",
+      "context": "Contribution au développement d’AWA Finance, plateforme SaaS de gestion financière intégrée pour TPE et PME.",
+      "points": [
+        "Développement de fonctionnalités de facturation, paiement-recouvrement et préparation comptable au sein d’une architecture modulaire.",
+        "Intégration de WhatsApp Business pour la transmission des factures, demandes de paiement, relances et reçus.",
+        "Intégration de Wave et Orange Money pour les paiements en ligne, avec confirmation automatique des encaissements par webhook.",
+        "Conception des traitements permettant de préparer les écritures comptables issues des factures et règlements, selon le référentiel SYSCOHADA, avec validation finale par l’utilisateur habilité.",
+        "Participation à la conception et à l’intégration des API GraphQL, modèles de données et traitements métier avec KeystoneJS 6, Prisma et MySQL.",
+        "Génération automatisée des factures, reçus et exports à partir de modèles HTML.",
+        "Intégration d’une brique IA basée sur Gemini / Vertex AI pour l’analyse et l’extraction d’informations à partir de pièces importées."
+      ]
+    },
+    "ayweu": {
+      "role": "Développeur Web Full-Stack & Designer",
+      "context": "Développement et évolution de la plateforme de gestion des opérations de livraison, avec prise en charge de flux locaux au Sénégal et internationaux.",
+      "points": [
+        "Intégration d’APIs externes de livraison (Yango, Paps).",
+        "Intégration des passerelles de paiement (Paydunya) et services de messagerie WhatsApp.",
+        "Automatisation de workflows opérationnels avec ActivePieces afin de réduire les traitements manuels.",
+        "Participation à l’amélioration des performances, de la fiabilité des échanges entre services et de la sécurité de la plateforme.",
+        "Développement et maintenance des fonctionnalités frontend et backend avec Next.js, Node.js/Express et MongoDB."
+      ]
+    },
+    "spadon": {
+      "role": "Développeur Frontend & Full-Stack",
+      "context": "Refonte moderne et optimisation des performances de la plateforme web Spadon.",
+      "points": [
+        "Refonte architecturale et graphique de la plateforme Spadon pour une expérience utilisateur moderne et fluide.",
+        "Conception de pages interactives et réactives haute performance sans dépendance lourde, avec un rendu optimisé."
+      ]
+    },
+    "feindy": {
+      "role": "Développeur Web & Backend Java",
+      "context": "Conception et déploiement d'une solution de communication client multi-canaux.",
+      "points": [
+        "Conception et développement d'une plateforme omnicanale d'envoi de messages clients (Email, WhatsApp, SMS).",
+        "Développement backend en Java EE / Spring avec persistance MySQL et gestion d'accès sécurisés.",
+        "Intégration de l'API Google SMTP, de l'API Meta WhatsApp et mise en place de tâches automatisées (CronJobs)."
+      ]
+    },
+    "nandigium": {
+      "role": "Assistant Cybersécurité & Réseaux",
+      "context": "Audit de sécurité d'infrastructure et conformité réglementaire.",
+      "points": [
+        "Application des principes fondamentaux de sécurité informatique : disponibilité, intégrité, confidentialité et traçabilité.",
+        "Mise en conformité avec la norme ISO 27001 et réalisation d'audits de sécurité.",
+        "Conception d'une architecture réseau interne sécurisée avec segmentation et politiques de contrôle d'accès."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de réalisations techniques démontrant mon expertise en architecture, plateformes web, réseaux, IA et IoT.",
+    "filterAll": "Tous",
+    "filterFullstack": "Full-Stack",
+    "filterBackend": "Backend & Systèmes",
+    "filterNetwork": "Réseaux & Télécoms",
+    "filterAiData": "IA & Data",
+    "filterIot": "IoT & Embarqué",
+    "viewDetails": "Détails du projet",
+    "viewCode": "Code Frontend",
+    "viewCodeBack": "Code Backend",
+    "viewDemo": "Démo Live",
+    "problemSolution": "Objectifs & Solution Technique",
+    "architecture": "Stack & Technologies",
+    "keyFeatures": "Points Clés & Résultats",
+    "fiveg": {
+      "title": "5G Network Designer (Outil de Dimensionnement & Planification 5G)",
+      "subtitle": "Plateforme interactive de dimensionnement et de cartographie dynamique d'un réseau 5G (Modèle COST-231 Hata, Capacité Shannon, Google Maps API)",
+      "desc": "Conception et réalisation d'un outil complet de dimensionnement et de déploiement de réseau 5G (zone, densité, fréquence, couverture radio COST-231 Hata, capacité Shannon, nombre optimal de gNodeB, backhaul et visualisation cartographique).",
+      "fullDesc": "Conception et réalisation d'un outil de dimensionnement et de mise en place d'un réseau 5G, réalisé dans le cadre du cours Réseaux, Télécoms et Services (RTS) à l'ESP Dakar. La plateforme permet de définir les paramètres techniques d'une zone géographique, de calculer automatiquement la couverture radio (modèle COST-231 Hata & 3GPP), la capacité (formule de Shannon et efficacité spectrale), le nombre optimal de stations de base gNodeB et le dimensionnement du backhaul (fibre, faisceau hertzien, satellite), avec un rendu cartographique dynamique sur Google Maps.",
+      "features": [
+        "Définition interactive des paramètres techniques d'un réseau 5G (zone, densité, bande de fréquence).",
+        "Calcul automatique de la couverture radio (COST-231 Hata) et de la capacité théorique (formule de Shannon).",
+        "Dimensionnement optimal du nombre de gNodeB et de la liaison de backhaul nécessaire (fibre, hertzienne, satellite).",
+        "Visualisation cartographique dynamique des sites et antennes avec géocodage sur Google Maps API.",
+        "Prise en compte des profils de zones : urbaines denses, rurales et périurbaines."
+      ]
+    },
+    "waxtaan": {
+      "title": "Waxtaan (WhatsApp Cloud Clone)",
+      "subtitle": "Plateforme de messagerie instantanée temps réel haute performance",
+      "desc": "Conception d'un clone WhatsApp scalable combinant Next.js et Spring Boot avec communication WebSocket sécurisée et gestion multi-conversations.",
+      "fullDesc": "Waxtaan est une application de messagerie instantanée moderne conçue pour offrir une expérience fluide en temps réel avec une latence inférieure à 50ms. Le système repose sur une architecture robuste avec un backend Spring Boot garantissant la résilience et un frontend Next.js en TypeScript pour une réactivité maximale.",
+      "features": [
+        "Messagerie bidirectionnelle en temps réel avec WebSocket et STOMP.",
+        "Authentification sécurisée JWT et chiffrement des sessions.",
+        "Gestion des statuts de présence (en ligne/hors-ligne) et accusés de réception.",
+        "Interface responsive et moderne avec Tailwind CSS."
+      ]
+    },
+    "dataeval": {
+      "title": "Data-Eval (Évaluateur de Bases de Données par IA)",
+      "subtitle": "Framework d'évaluation et de correction de bases de données assisté par IA",
+      "desc": "Plateforme innovante analysant et corrigeant automatiquement des structures de schémas et requêtes SQL complexes grâce à DeepSeek AI.",
+      "fullDesc": "Data-Eval simplifie l'apprentissage et l'audit de bases de données SQL. L'application ingère des requêtes et schémas relationnels, les analyse en profondeur et utilise le modèle DeepSeek AI pour fournir des corrections détaillées, des explications pédagogiques et des métriques de performance SQL.",
+      "features": [
+        "Analyse syntaxique et sémantique des requêtes PostgreSQL et MySQL.",
+        "Pipeline d'interrogation IA avec prompt-engineering adapté aux contraintes SGBD.",
+        "Historique des analyses et tableau de bord de progression pour les utilisateurs."
+      ]
+    },
+    "ecg": {
+      "title": "CardioCare IoT & Télémédecine",
+      "subtitle": "Système de télémédecine et surveillance cardiaque IoT en temps réel",
+      "desc": "Dispositif connecté avec capteur AD8232, microcontrôleur ESP32 et protocole MQTT pour le monitoring cardiaque continu à distance.",
+      "fullDesc": "Projet médical innovant permettant aux praticiens de surveiller le tracé électrocardiographique (ECG) de patients à distance. Les signaux physiologiques captés par l'ESP32 sont transmis via MQTT avec une latence minimale vers un backend Node.js et visualisés en direct sur un dashboard React interactif.",
+      "features": [
+        "Transmission fluide et sécurisée des signaux ECG via MQTT / WebSockets.",
+        "Algorithme de détection et alertes automatiques en cas d'anomalies de rythme cardiaque.",
+        "Dashboard interactif pour les professionnels de santé avec historique des sessions."
+      ]
+    },
+    "maternity": {
+      "title": "MaternitéPlus (Gestion Hospitalière)",
+      "subtitle": "Système de gestion hospitalière et suivi obstétrique",
+      "desc": "Application web sécurisée optimisant la gestion des dossiers patientes, des naissances et du personnel soignant.",
+      "fullDesc": "Conçu pour moderniser la gestion en maternité, ce système centralise les dossiers médicaux des patientes, planifie les consultations prénatales et assure la traçabilité des naissances avec des niveaux d'habilitation stricts.",
+      "features": [
+        "Authentification multi-rôles sécurisée (médecins, sages-femmes, administrateurs).",
+        "Suivi en temps réel des admissions et des accouchements.",
+        "Génération de rapports statistiques et archivage sécurisé des données de santé."
+      ]
+    },
+    "spadon": {
+      "title": "Spadon Multi-Canaux Automation",
+      "subtitle": "Système automatisé de notifications et campagnes multi-canaux",
+      "desc": "Moteur d'automatisation d'envois planifiés (Emails SMTP & WhatsApp) avec gestion sécurisée sous Tomcat.",
+      "fullDesc": "Solution enterprise permettant l'envoi fiable et planifié de messages transactionnels et promotionnels pour les clients de Spadon, garantissant une délivrabilité optimale et une traçabilité complète.",
+      "features": [
+        "Planification par tâches automatisées (CronJobs) avec gestion des files d'attente.",
+        "Intégration de l'API Meta WhatsApp Business et relais SMTP Google.",
+        "Sécurisation rigoureuse au niveau serveur Tomcat et chiffrement des identifiants."
+      ]
+    },
+    "bnf": {
+      "title": "BNF Expression Parser en C",
+      "subtitle": "Interpréteur et analyseur syntaxique d'expressions arithmétiques en C",
+      "desc": "Implémentation d'un parseur respectant la grammaire BNF avec gestion de priorité des opérateurs et arbre syntaxique.",
+      "fullDesc": "Projet d'ingénierie système démontrant une maîtrise approfondie de la théorie des langages et de la programmation bas niveau en C. Le programme tokenize, analyse syntaxiquement et évalue des expressions arithmétiques complexes tout en gérant rigoureusement la mémoire.",
+      "features": [
+        "Analyseur lexical et syntaxique basé sur la grammaire formelle BNF.",
+        "Construction d'arbres syntaxiques (AST) et respect strict des priorités.",
+        "Gestion robuste des erreurs de syntaxe et validation formelle des entrées."
+      ]
+    }
+  },
+  "skills": {
+    "title": "Compétences Techniques & Stack",
+    "subtitle": "Les technologies et outils que j'utilise pour concevoir des systèmes robustes et performants.",
+    "cat": {
+      "languages": "Langages & Fondamentaux",
+      "frontend": "Frontend & UI",
+      "backend": "Backend & Architectures",
+      "fintech": "Paiements, APIs & Cartographie",
+      "ai_cloud": "IA, Cloud & Bases de Données",
+      "devops": "DevOps, Outils & Méthodes"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Un projet en tête, une opportunité de recrutement ou une collaboration ? Discutons-en.",
+    "getInTouch": "Prenons contact",
+    "name": "Votre nom",
+    "email": "Votre adresse email",
+    "subject": "Objet du message",
+    "message": "Votre message...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+    "error": "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou m'écrire directement par email.",
+    "phone": "Téléphone",
+    "address": "Localisation",
+    "emailLabel": "Email direct"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "builtWith": "Conçu & développé avec React, Vite, Tailwind CSS et Framer Motion.",
+    "backToTop": "Haut de page"
+  }
 }
+

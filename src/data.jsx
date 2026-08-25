@@ -1,715 +1,362 @@
+import React from 'react';
 import {
-  FaHome,
-  FaUser,
-  FaFolderOpen,
-  FaEnvelopeOpen,
-  FaBriefcase,
-  FaGraduationCap,
+  FaJava,
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaLinux,
+  FaGitAlt,
+  FaPhp,
   FaCode,
+  FaServer,
+  FaDatabase,
+  FaTools,
+  FaBrain,
+  FaMoneyBillWave,
+  FaNetworkWired,
 } from 'react-icons/fa';
-import { FiFileText, FiUser, FiExternalLink } from 'react-icons/fi';
+import {
+  SiSpringboot,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiMongodb,
+  SiMysql,
+  SiSupabase,
+  SiFirebase,
+  SiTailwindcss,
+  SiAngular,
+  SiUml,
+  SiPostman,
+  SiC,
+  SiPrisma,
+  SiGraphql,
+  SiGooglecloud,
+  SiOpenai,
+} from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io';
+import { TbBrandWhatsapp } from 'react-icons/tb';
 
+// Assets
 import Work1 from './assets/ecg_iot.png';
 import Work2 from './assets/maternity.jpg';
 import Work3 from './assets/spadon.jpg';
 import Work4 from './assets/c.png';
-import Work5 from './assets/donnees.png';
-import Work6 from './assets/waxtaan.png';
 import Work7 from './assets/data_eval.png';
 import Work8 from './assets/waxtaan_splash.png';
+import Work5G from './assets/5g_network_designer.png';
 
-import Theme1 from './assets/purple.png';
-import Theme2 from './assets/red.png';
-import Theme3 from './assets/blueviolet.png';
-import Theme4 from './assets/blue.png';
-import Theme5 from './assets/goldenrod.png';
-import Theme6 from './assets/magenta.png';
-import Theme7 from './assets/yellowgreen.png';
-import Theme8 from './assets/orange.png';
-import Theme9 from './assets/green.png';
-import Theme10 from './assets/yellow.png';
+import nandigium from './assets/nandigium_consulting_logo.jpeg';
+import feindy from './assets/feindy.jpg';
+import awa from './assets/awa_logo.png';
+import ayweu from './assets/ayweu_logo.png';
+import EngineerPhoto from './assets/me_engineer.jpg';
+import CvPdf from './assets/Mouhamed_DIAGNE_FlowCV_Resume_2026-08-25.pdf';
 
-export const links = [
-  {
-    id: 1,
-    name: 'Home',
-    icon: <FaHome className='nav__icon' />,
-    path: '/',
-  },
-
-  {
-    id: 2,
-    name: 'About',
-    icon: <FaUser className='nav__icon' />,
-    path: '/about',
-  },
-
-  {
-    id: 3,
-    name: 'Portfolio',
-    icon: <FaFolderOpen className='nav__icon' />,
-    path: '/portfolio',
-  },
-
-  {
-    id: 4,
-    name: 'Contact',
-    icon: <FaEnvelopeOpen className='nav__icon' />,
-    path: '/contact',
-  },
-];
-
-
+export const personalInfo = {
+  name: "Mouhamed DIAGNE",
+  titleKey: "hero.role",
+  subtitleKey: "hero.subtitle",
+  email: "mouhameddiagne029@gmail.com",
+  phone: "+221 78 195 89 11",
+  location: "Dakar, Sénégal",
+  statusKey: "hero.status",
+  profileImg: EngineerPhoto,
+  cvFile: CvPdf,
+  socials: {
+    github: "https://github.com/Mouhameddiagne2003",
+    linkedin: "https://www.linkedin.com/in/mouhamed-diagne-265015245/",
+    twitter: "https://x.com/_amethjr10",
+  }
+};
 
 export const stats = [
-  {
-    id: 1,
-    no: '3+',
-    title: 'Years of <br /> Experience',
-  },
-
-  {
-    id: 2,
-    no: '4+',
-    title: 'Companies <br /> Worked',
-  },
-
-  {
-    id: 3,
-    no: '81+',
-    title: 'Happy <br /> Customers',
-  },
-
-  {
-    id: 4,
-    no: '53+',
-    title: ' Awards <br /> Won',
-  },
+  { id: 1, numericValue: 3, suffix: "+", labelKey: "stats.yearsExperience" },
+  { id: 2, numericValue: 10, suffix: "+", labelKey: "stats.projectsDelivered" },
+  { id: 3, numericValue: 4, suffix: "+", labelKey: "stats.companiesWorked" },
+  { id: 4, numericValue: 100, suffix: "%", labelKey: "stats.commitment" },
 ];
 
-export const Educationresume = [
+export const educationList = [
   {
     id: 1,
-    icon: <FaGraduationCap />,
-    year: '2023-2026',
-    title: 'DIC GENIE INFORMATIQUE <span> Ecole Superieure Polytechnique de DAKAR </span>',
-    desc: 'Diplôme d\'Ingénieur de Conception en Génie Informatique'
+    degreeKey: "edu.dic.degree",
+    schoolKey: "edu.dic.school",
+    period: "2023 — 2026",
+    descKey: "edu.dic.desc",
+    badge: "Diplôme d'Ingénieur",
   },
   {
     id: 2,
-    icon: <FaGraduationCap />,
-    year: '2021-2023',
-    title: 'DUT INFORMATIQUE <span> Ecole Superieure Polytechnique de DAKAR </span>',
-    desc: 'Diplôme Universitaire de Technologie en Informatique'
+    degreeKey: "edu.dut.degree",
+    schoolKey: "edu.dut.school",
+    period: "2021 — 2023",
+    descKey: "edu.dut.desc",
+    badge: "DUT Informatique",
   },
   {
     id: 3,
-    icon: <FaGraduationCap />,
-    year: '2021',
-    title: 'Baccalauréat Scientifique <span> Lycée d\'Excellence Privé Birago DIOP de DAKAR </span>',
-    desc: 'Obtention de mon BAC série S2 avec la mention BIEN',
+    degreeKey: "edu.bac.degree",
+    schoolKey: "edu.bac.school",
+    period: "2021",
+    descKey: "edu.bac.desc",
+    badge: "Mention Bien",
   }
-    ]
-import nandigium from "../src/assets/nandigium_consulting_logo.jpeg";
-import feindy from "../src/assets/feindy.jpg"
-import awa from "./assets/awa_logo.png";
-import ayweu from "./assets/ayweu_logo.png";
+];
+
 export const experiences = [
   {
-    title: "SoftwareDeveloperIntern",
-    company_name: "Awa Africa",
-    icon: awa,
-    iconBg: "#FFFFFF",
-    date: "Août 2025 - Présent",
-    points: [
-      "Awa1stPoint",
-      "Awa2ndPoint"
-    ],
+    id: "awa",
+    roleKey: "exp.awa.role",
+    company: "AWA Africa",
+    contextKey: "exp.awa.context",
+    period: "Août 2025 — Juillet 2026",
+    logo: awa,
+    location: "Dakar, Sénégal",
+    typeKey: "exp.type.internship",
+    skills: ["KeystoneJS 6", "React", "GraphQL", "Prisma", "MySQL", "Gemini / Vertex AI", "Google Cloud", "Wave / Orange Money API", "WhatsApp API"],
+    pointsKey: "exp.awa.points",
   },
   {
-    title: "DesignerWebDeveloper",
-    company_name: "Ayweu",
-    icon: ayweu,
-    iconBg: "#FFFFFF",
-    date: "Mars 2025 - Août 2025",
-    points: [
-      "Ayweu1stPoint",
-      "Ayweu2ndPoint",
-      "Ayweu3rdPoint",
-      "Ayweu4thPoint"
-    ],
+    id: "ayweu",
+    roleKey: "exp.ayweu.role",
+    company: "Ayweu",
+    contextKey: "exp.ayweu.context",
+    period: "Mars 2025 — Août 2025",
+    logo: ayweu,
+    location: "Dakar & Gambie",
+    typeKey: "exp.type.internship",
+    skills: ["Next.js", "Node.js", "Express", "MongoDB", "ActivePieces", "Paydunya", "APIs Yango / Paps", "WhatsApp API"],
+    pointsKey: "exp.ayweu.points",
   },
   {
-    title: "CybersecurityAssistant",
-    company_name: "Nandigium Consulting",
-    icon: nandigium,
-    iconBg: "#383E56",
-    date: "Juillet2022-Sept2022",
-    points: [
-      "Nandigium1fstPoint",
-      "Nandigium2ndPoint",
-      "Nandigium3rdPoint"
-    ],
+    id: "spadon",
+    roleKey: "exp.spadon.role",
+    company: "Spadon",
+    contextKey: "exp.spadon.context",
+    period: "Sept 2023 — 2024",
+    logo: feindy,
+    location: "Dakar, Sénégal",
+    typeKey: "exp.type.contract",
+    skills: ["FullStack JavaScript", "Java EE", "REST API", "Optimisation UI"],
+    pointsKey: "exp.spadon.points",
   },
   {
-    title: "WebDeveloper",
-    company_name: "Feindy Solutions",
-    icon: feindy,
-    iconBg: "#000000",
-    date: "Mai2023-Juil2023",
-    points: [
-      "Feindy1fstPoint",
-      "Feindy2ndPoint",
-      "Feindy3rdPoint",
-      "Feindy4thPoint",
-    ],
+    id: "feindy",
+    roleKey: "exp.feindy.role",
+    company: "Feindy Solutions",
+    contextKey: "exp.feindy.context",
+    period: "Mai 2023 — Juil 2023",
+    logo: feindy,
+    location: "Dakar, Sénégal",
+    typeKey: "exp.type.internship",
+    skills: ["Java EE", "Spring", "MySQL", "SMTP Google API", "CronJobs"],
+    pointsKey: "exp.feindy.points",
   },
   {
-    title: "FrontDeveloper",
-    company_name: "Spadon",
-    icon: feindy,
-    iconBg: "#000000",
-    date: "Sept2023-Now",
-    points: [
-      "Spadon1fstPoint",
-      "Spadon2ndPoint"
-    ],
+    id: "nandigium",
+    roleKey: "exp.nandigium.role",
+    company: "Nandigium Consulting",
+    contextKey: "exp.nandigium.context",
+    period: "Juil 2022 — Sept 2022",
+    logo: nandigium,
+    location: "Dakar, Sénégal",
+    typeKey: "exp.type.internship",
+    skills: ["Cybersécurité", "ISO 27001", "Réseaux Sécurisés", "Audit"],
+    pointsKey: "exp.nandigium.points",
   }
 ];
 
-import { FaLaptopCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa';
-import { FiLayers } from 'react-icons/fi';
-
-export const services = [
-  {
-    title: "ConcepteurTitle",
-    icon: FiLayers ,
-    desc: "conceptdesc",
-    points: [
-      "ServiceA1fstPoint",
-      "ServiceA2ndPoint",
-      "ServiceA3rdPoint",
-      "ServiceA4thPoint",
-    ],
-  },
-  {
-    title: "WebDeveloper",
-    icon: FaLaptopCode,
-    desc: "webdevdesc",
-    points: [
-      "ServiceB1fstPoint",
-      "ServiceB2ndPoint",
-      "ServiceB3rdPoint",
-      "ServiceB4thPoint",
-    ],
-  },
-  {
-    title: "MobileDeveloper",
-    icon: FaMobileAlt,
-    desc: "mobdevdesc",
-    points: [
-      "ServiceC1fstPoint",
-      "ServiceC2ndPoint",
-      "ServiceC3rdPoint",
-      "ServiceC4thPoint",
-    ],
-  },
-  {
-    title: "Designer",
-    icon: FaPaintBrush,
-    desc: "desdesc",
-    points: [
-      "ServiceD1fstPoint",
-      "ServiceD2ndPoint",
-      "ServiceD3rdPoint",
-      "ServiceD4thPoint",
-    ],
-  },
-];
-
-
-export const resume = [
+export const projects = [
   {
     id: 1,
-    category: 'experience',
-    icon: <FaBriefcase />,
-    year: '2018 - PRESENT',
-    title: 'Web Developer <span> Envato </span>',
-    desc: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,',
-  },
-
-  {
-    id: 2,
-    category: 'experience',
-    icon: <FaBriefcase />,
-    year: '2013 - 2018',
-    title: 'UI/UX Designer <span> Themeforest </span>',
-    desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-  },
-
-  {
-    id: 3,
-    category: 'experience',
-    icon: <FaBriefcase />,
-    year: '2005 - 2013',
-    title: 'Consultant <span> Videohive </span>',
-    desc: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
-  },
-
-  {
-    id: 4,
-    category: 'education',
-    icon: <FaGraduationCap />,
-    year: '2015',
-    title: 'Engineering Degree <span> Oxford University </span>',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore',
-  },
-
-  {
-    id: 5,
-    category: 'education',
-    icon: <FaGraduationCap />,
-    year: '2012',
-    title: 'Master Degree <span> KIEV University </span>',
-    desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-  },
-
-  {
-    id: 6,
-    category: 'education',
-    icon: <FaGraduationCap />,
-    year: '2009',
-    title: 'Bachelor Degree <span> Tunis High School </span>',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore',
-  },
-];
-import { FaHtml5, FaPhp,FaFigma,FaJava, FaAngular, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaLinux } from 'react-icons/fa';
-import { IoLogoCss3, IoLogoJavascript } from 'react-icons/io';
-import { SiMongodb, SiMysql, SiUml, SiCanva, SiNextdotjs, SiSupabase, SiSpringboot, SiPostgresql, SiTypescript } from 'react-icons/si';
-
-export const techskills = [
-  {
-    id: 1,
-    title: 'Html',
-    color: '#FFA500',
-    percentage: '75',
-    logo: FaHtml5,
-    level: "Advanced"
+    slug: "5g-network-designer",
+    titleKey: "projects.fiveg.title",
+    subtitleKey: "projects.fiveg.subtitle",
+    category: "network",
+    img: Work5G,
+    featured: true,
+    tags: ["Next.js", "Tailwind CSS", "Node.js (Express)", "Prisma", "PostgreSQL", "Google Maps API", "COST-231 Hata"],
+    metrics: "Modélisation COST-231 Hata • Shannon & 3GPP",
+    descKey: "projects.fiveg.desc",
+    fullDescKey: "projects.fiveg.fullDesc",
+    featuresKey: "projects.fiveg.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003/5G-Network-Design",
+    source_code_back: "https://github.com/Mouhameddiagne2003/5G-Network-Design-back",
+    demo_link: null,
   },
   {
     id: 2,
-    title: 'Css',
-    color: '#0000FF',
-    percentage: '70',
-    logo: IoLogoCss3,
-    level: "Advanced"
-  },
-  {
-    id: 3,
-    title: 'JavaScript',
-    color: '#FFFF00',
-    percentage: '70',
-    logo: IoLogoJavascript,
-    level: "Advanced"
-  },
-  {
-    id: 4,
-    title: 'Php',
-    color: '#777BB3',
-    percentage: '60',
-    logo: FaPhp,
-    level: "Intermediate"
-  },
-  {
-    id: 5,
-    title: 'Java',
-    color: '#F89820',
-    percentage: '75',
-    logo: FaJava,
-    level: "Advanced"
-  },
-  {
-    id: 6,
-    title: 'Angular',
-    color: '#c3002f',
-    percentage: '45',
-    logo: FaAngular,
-    level: "Intermediate"
-  },
-  {
-    id: 7,
-    title: 'ReactJS',
-    color: '#61dbfb',
-    percentage: '60',
-    logo: FaReact,
-    level: "Intermediate"
-  },
-  {
-    id: 8,
-    title: 'NodeJS',
-    color: '#68a063',
-    percentage: '65',
-    logo: FaNodeJs,
-    level: "Intermediate"
-  },
-  {
-    id: 9,
-    title: 'MongoDb',
-    color: '#4DB33D',
-    percentage: '70',
-    logo: SiMongodb,
-    level: "Advanced"
-  },
-  {
-    id: 10,
-    title: 'Mysql',
-    color: '#00758f',
-    percentage: '80',
-    logo: SiMysql,
-    level: "Advanced"
-  },
-  {
-    id: 11,
-    title: 'Git/Github',
-    color: '#000000',
-    percentage: '50',
-    logo: FaGitAlt,
-    level: "Intermediate"
-  },
-  {
-    id: 12,
-    title: 'Docker',
-    color: '#0db7ed',
-    percentage: '45',
-    logo: FaDocker,
-    level: "Intermediate"
-  },
-  {
-    id: 13,
-    title: 'Linux',
-    color: '#ffcc33',
-    percentage: '75',
-    logo: FaLinux,
-    level: "Advanced"
-  },
-  {
-    id: 14,
-    title: 'UML',
-    color: '#000000',
-    percentage: '75',
-    logo: SiUml,
-    level: "Advanced"
-  },
-  {
-    id: 15,
-    title: 'Canva',
-    color: '#2A89DA',
-    percentage: '50',
-    logo: SiCanva,
-    level: "Intermediate"
-  },
-  {
-    id: 16,
-    title: 'Figma',
-    color: '#ff7262',
-    percentage: '35',
-    logo: FaFigma,
-    level: "Beginner"
-  },
-  {
-    id: 17,
-    title: 'Next JS',
-    color: '#000000',
-    percentage: '80',
-    logo: SiNextdotjs,
-    level: "Advanced"
-  },
-  {
-    id: 18,
-    title: 'Supabase',
-    color: '#3ECF8E',
-    percentage: '75',
-    logo: SiSupabase,
-    level: "Advanced"
-  },
-  {
-    id: 19,
-    title: 'SpringBoot',
-    color: '#6DB33F',
-    percentage: '65',
-    logo: SiSpringboot,
-    level: "Intermediate"
-  },
-  {
-    id: 20,
-    title: 'PostgreSQL',
-    color: '#336791',
-    percentage: '70',
-    logo: SiPostgresql,
-    level: "Advanced"
-  },
-  {
-    id: 21,
-    title: 'TypeScript',
-    color: '#3178C6',
-    percentage: '75',
-    logo: SiTypescript,
-    level: "Advanced"
-  },
-];
-
-export const profskills = [
-  {
-    title: 'Creativity',
-    percentage: '75',
-  },
-  {
-    title: 'ProblemSolving',
-    percentage: '75',
-  },
-  {
-    title: 'Communication',
-    percentage: '90',
-  },
-  {
-    title: 'Teamwork',
-    percentage: '85',
-  }
-  ]
-
-export const portfolio = [
-  {
-    id: 6,
+    slug: "waxtaan",
+    titleKey: "projects.waxtaan.title",
+    subtitleKey: "projects.waxtaan.subtitle",
+    category: "fullstack",
     img: Work8,
-    title: 'portfoliotitle6',
-    desc :'portfoliodesc6',
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "springboot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "blue-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/Mouhameddiagne2003/Waxtaan-back"
+    featured: true,
+    tags: ["Next.js", "Spring Boot", "TypeScript", "Tailwind CSS", "WebSocket", "PostgreSQL"],
+    metrics: "Temps réel < 50ms • Multi-utilisateurs",
+    descKey: "projects.waxtaan.desc",
+    fullDescKey: "projects.waxtaan.fullDesc",
+    featuresKey: "projects.waxtaan.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003/Waxtaan-back",
+    demo_link: null,
   },
   {
-    id: 7,
+    id: 3,
+    slug: "data-eval",
+    titleKey: "projects.dataeval.title",
+    subtitleKey: "projects.dataeval.subtitle",
+    category: "ai-data",
     img: Work7,
-    title: 'portfoliotitle7',
-    desc: 'portfoliodesc7',
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "postgresql",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "blue-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/Mouhameddiagne2003/data-eval-back"
+    featured: true,
+    tags: ["React", "Node.js", "PostgreSQL", "DeepSeek AI", "SQL Parsing"],
+    metrics: "Correction instantanée par IA & feedback syntaxique",
+    descKey: "projects.dataeval.desc",
+    fullDescKey: "projects.dataeval.fullDesc",
+    featuresKey: "projects.dataeval.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003/data-eval-back",
+    demo_link: null,
   },
   {
-    id: 1,
+    id: 4,
+    slug: "ecg-iot",
+    titleKey: "projects.ecg.title",
+    subtitleKey: "projects.ecg.subtitle",
+    category: "iot",
     img: Work1,
-    title: 'portfoliotitle1',
-    desc :'portfoliodesc1',
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs-express",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "C++",
-        color: "green-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/Mouhameddiagne2003/Heart_iot"
+    featured: true,
+    tags: ["ESP32", "AD8232", "MQTT", "React", "Express.js", "MongoDB"],
+    metrics: "Flux ECG en temps réel • Alertes d'anomalies",
+    descKey: "projects.ecg.desc",
+    fullDescKey: "projects.ecg.fullDesc",
+    featuresKey: "projects.ecg.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003/Heart_iot",
+    demo_link: "https://youtu.be/DiDXGserTGM",
   },
   {
-    id: 2,
+    id: 5,
+    slug: "maternity-plus",
+    titleKey: "projects.maternity.title",
+    subtitleKey: "projects.maternity.subtitle",
+    category: "fullstack",
     img: Work2,
-    title: 'portfoliotitle2',
-    desc: 'portfoliodesc2',
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs-express",
-        color: "green-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/Mouhameddiagne2003/MaternitePlus"
-
+    featured: false,
+    tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    metrics: "Gestion sécurisée des dossiers médicaux & naissances",
+    descKey: "projects.maternity.desc",
+    fullDescKey: "projects.maternity.fullDesc",
+    featuresKey: "projects.maternity.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003/MaternitePlus",
+    demo_link: null,
   },
-  {
-    id: 3,
-    img: Work3,
-    title: 'portfoliotitle3',
-    desc:'portfoliodesc3',
-    tags: [
-      {
-        name: "java2ee",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "green-text-gradient",
-      },
-      {
-        name: "html-jsp",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "css",
-        color: "blue-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/"
-  },
-  {
-    id: 4,
-    img: Work4,
-    title: 'portfoliotitle4',
-    desc: 'portfoliodesc4',
-    tags: [
-      {
-        name: "c",
-        color: "blue-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/"
-
-  },
-  {
-    id: 5,
-    img: Work5,
-    title: 'portfoliotitle5',
-    desc:'portfoliodesc5',
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "js",
-        color: "pink-text-gradient",
-      },
-    ],
-    source_code_link: "https://github.com/"
-
-  },
-
-
-];
-
-export const themes = [
-  {
-    id: 1,
-    img: Theme1,
-    color: 'hsl(252, 35%, 51%)',
-  },
-
-  {
-    id: 2,
-    img: Theme2,
-    color: 'hsl(4, 93%, 54%)',
-  },
-
-  {
-    id: 3,
-    img: Theme3,
-    color: 'hsl(271, 76%, 53%)',
-  },
-
-  {
-    id: 4,
-    img: Theme4,
-    color: '#006DA4',
-  },
-
-  {
-    id: 5,
-    img: Theme5,
-    color: 'hsl(43, 74%, 49%)',
-  },
-
   {
     id: 6,
-    img: Theme6,
-    color: 'hsl(339, 81%, 66%)',
+    slug: "spadon-automations",
+    titleKey: "projects.spadon.title",
+    subtitleKey: "projects.spadon.subtitle",
+    category: "fullstack",
+    img: Work3,
+    featured: false,
+    tags: ["Java EE", "WhatsApp API", "Google SMTP", "Tomcat Security", "CronJobs"],
+    metrics: "Automatisation de 100% des notifications clients",
+    descKey: "projects.spadon.desc",
+    fullDescKey: "projects.spadon.fullDesc",
+    featuresKey: "projects.spadon.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003",
+    demo_link: null,
   },
-
   {
     id: 7,
-    img: Theme7,
-    color: 'hsl(80, 61%, 50%)',
-  },
+    slug: "bnf-c-evaluator",
+    titleKey: "projects.bnf.title",
+    subtitleKey: "projects.bnf.subtitle",
+    category: "backend",
+    img: Work4,
+    featured: false,
+    tags: ["Langage C", "Grammaire BNF", "Analyse Syntaxique", "Structures de Données"],
+    metrics: "Évaluation arithmétique rigoureuse & gestion d'erreurs",
+    descKey: "projects.bnf.desc",
+    fullDescKey: "projects.bnf.fullDesc",
+    featuresKey: "projects.bnf.features",
+    source_code_link: "https://github.com/Mouhameddiagne2003",
+    demo_link: null,
+  }
+];
 
+export const skillCategories = [
   {
-    id: 8,
-    img: Theme8,
-    color: 'hsl(19, 96%, 52%)',
+    id: "languages",
+    titleKey: "skills.cat.languages",
+    icon: FaCode,
+    skills: [
+      { name: "Java", icon: FaJava, level: "Production", color: "#F89820" },
+      { name: "TypeScript", icon: SiTypescript, level: "Production", color: "#3178C6" },
+      { name: "JavaScript", icon: IoLogoJavascript, level: "Production", color: "#F7DF1E" },
+      { name: "C / C++", icon: SiC, level: "Système", color: "#A8B9CC" },
+      { name: "PHP", icon: FaPhp, level: "Avancé", color: "#777BB4" },
+      { name: "SQL", icon: SiPostgresql, level: "Production", color: "#4169E1" },
+    ]
   },
-
   {
-    id: 9,
-    img: Theme9,
-    color: 'hsl(88, 65%, 43%)',
+    id: "frontend",
+    titleKey: "skills.cat.frontend",
+    icon: FaReact,
+    skills: [
+      { name: "Next.js", icon: SiNextdotjs, level: "Production", color: "#111827", darkColor: "#F4F4F5" },
+      { name: "React.js", icon: FaReact, level: "Production", color: "#61DAFB" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, level: "Production", color: "#06B6D4" },
+      { name: "Angular", icon: SiAngular, level: "Intermédiaire", color: "#DD0031" },
+    ]
   },
-
   {
-    id: 10,
-    img: Theme10,
-    color: 'hsl(42, 100%, 50%)',
+    id: "backend",
+    titleKey: "skills.cat.backend",
+    icon: FaServer,
+    skills: [
+      { name: "Spring Boot", icon: SiSpringboot, level: "Production", color: "#6DB33F" },
+      { name: "Node.js / Express", icon: FaNodeJs, level: "Production", color: "#5FA04E" },
+      { name: "GraphQL", icon: SiGraphql, level: "Production", color: "#E10098" },
+      { name: "Prisma ORM", icon: SiPrisma, level: "Production", color: "#2D3748" },
+      { name: "KeystoneJS 6", icon: FaServer, level: "Production", color: "#166BFF" },
+      { name: "REST APIs & WebSocket", icon: SiPostman, level: "Production", color: "#FF6C37" },
+    ]
   },
+  {
+    id: "fintech_apis",
+    titleKey: "skills.cat.fintech",
+    icon: FaMoneyBillWave,
+    skills: [
+      { name: "Wave Money API", icon: FaMoneyBillWave, level: "Intégration", color: "#1DC3E8" },
+      { name: "Orange Money API", icon: FaMoneyBillWave, level: "Intégration", color: "#FF7900" },
+      { name: "Paydunya / PayTech", icon: FaMoneyBillWave, level: "Agrégation", color: "#00A859" },
+      { name: "WhatsApp Business Cloud", icon: TbBrandWhatsapp, level: "Production", color: "#25D366" },
+      { name: "Google Maps API", icon: FaNetworkWired, level: "Cartographie", color: "#4285F4" },
+    ]
+  },
+  {
+    id: "ai_cloud",
+    titleKey: "skills.cat.ai_cloud",
+    icon: FaBrain,
+    skills: [
+      { name: "Google Gemini / Vertex AI", icon: FaBrain, level: "Intégration", color: "#1A73E8" },
+      { name: "DeepSeek AI", icon: SiOpenai, level: "Intégration", color: "#4D6BFE" },
+      { name: "Google Cloud (GCP)", icon: SiGooglecloud, level: "Cloud", color: "#4285F4" },
+      { name: "PostgreSQL", icon: SiPostgresql, level: "Production", color: "#4169E1" },
+      { name: "MongoDB", icon: SiMongodb, level: "Production", color: "#47A248" },
+      { name: "MySQL", icon: SiMysql, level: "Production", color: "#4479A1" },
+      { name: "Supabase / Firebase", icon: SiSupabase, level: "Production", color: "#3ECF8E" },
+    ]
+  },
+  {
+    id: "devops",
+    titleKey: "skills.cat.devops",
+    icon: FaTools,
+    skills: [
+      { name: "Docker", icon: FaDocker, level: "Production", color: "#2496ED" },
+      { name: "Linux & Bash", icon: FaLinux, level: "Production", color: "#FCC624" },
+      { name: "Git & GitHub", icon: FaGitAlt, level: "Production", color: "#F05032" },
+      { name: "UML / Modélisation", icon: SiUml, level: "Conception", color: "#5B21B6", darkColor: "#C4B5FD" },
+      { name: "Cybersécurité (ISO 27001)", icon: FaTools, level: "Fondations", color: "#00B4D8" },
+    ]
+  }
 ];

@@ -1,177 +1,179 @@
-/* styles/index.css */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.black-gradient {
-    background: #000000; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-            to right,
-            #434343,
-            #000000
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-            to right,
-            #434343,
-            #000000
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+:root {
+  --bg-primary: #09090b;
+  --bg-surface: #121215;
+  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
-.green-text-gradient {
-    background: #11998e; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-            to top,
-            #11998e,
-            #38ef7d
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-            to top,
-            #11998e,
-            #38ef7d
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.light {
+  --bg-primary: #fafafa;
+  --bg-surface: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.08);
 }
 
-.blue-text-gradient {
-    /* background: -webkit-linear-gradient(#eee, #333); */
-    background: #56ccf2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-            to top,
-            #2f80ed,
-            #56ccf2
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-            to top,
-            #2f80ed,
-            #56ccf2
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-.pink-text-gradient {
-    background: #ec008c; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-            to top,
-            #ec008c,
-            #fc6767
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-            to top,
-            #ec008c,
-            #fc6767
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.aboutImg::after {
-    @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-textColor -z-10
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
 }
 
-.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
-    display: inline-block;
-    vertical-align: middle;
-    /**vertical-align: auto;*/
-    /**zoom: 1;*/
-    /**display: inline;*/
-    position: relative;
-    font-size:60px;
-    font-weight:900
-
-}
-.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-default .odometer-digit {
-    display: inline-block;
-    vertical-align: middle;
-    /**vertical-align: auto;*/
-    /**zoom: 1;*/
-    /**display: inline;*/
-    position: relative;
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
-    display: inline-block;
-    vertical-align: middle;
-    /**vertical-align: auto;*/
-    /**zoom: 1;*/
-    /**display: inline;*/
-    visibility: hidden;
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
-    text-align: left;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
-    display: block;
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
-    display: block;
-    -webkit-backface-visibility: hidden;
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-default .odometer-digit .odometer-value {
-    display: block;
-    -webkit-transform: translateZ(0);
-}
-.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
-    position: absolute;
-}
-.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
-    -webkit-transition: -webkit-transform 2s;
-    -moz-transition: -moz-transform 2s;
-    -ms-transition: -ms-transform 2s;
-    -o-transition: -o-transform 2s;
-    transition: transform 2s;
-}
-.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-    -webkit-transition: -webkit-transform 2s;
-    -moz-transition: -moz-transform 2s;
-    -ms-transition: -ms-transform 2s;
-    -o-transition: -o-transform 2s;
-    transition: transform 2s;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
 
-.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
-    font-family: "Helvetica Neue", sans-serif;
-    line-height: 1.1em;
-}
-.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
-    text-align: center;
+.light ::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
 }
 
-
-@media(max-width: 1100px){
-    .odometer.odometer-auto-theme, .odometer.odometer-theme-default{
-        font-size: 32px;
-    }
-}
-@media(max-width: 500px){
-    .odometer.odometer-auto-theme, .odometer.odometer-theme-default{
-        font-size: 20px;
-    }
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
 }
 
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.light .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Dot pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.light .bg-dot-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(18, 18, 21, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* React Bits-inspired shiny text used for the hero identity. */
+.shiny-text {
+  color: transparent;
+  background-image: linear-gradient(
+    115deg,
+    #0f172a 25%,
+    #2563eb 43%,
+    #0ea5e9 50%,
+    #2563eb 57%,
+    #0f172a 75%
+  );
+  background-size: 220% 100%;
+  background-position: 120% 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shiny-text-sweep var(--shiny-duration, 3.2s) linear infinite;
+}
+
+.dark .shiny-text {
+  background-image: linear-gradient(
+    115deg,
+    #f4f4f5 25%,
+    #60a5fa 43%,
+    #22d3ee 50%,
+    #60a5fa 57%,
+    #f4f4f5 75%
+  );
+}
+
+.terminal-path {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: terminal-type 2.8s steps(35, end) 0.45s forwards;
+}
+
+.terminal-cursor {
+  animation: terminal-cursor-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes shiny-text-sweep {
+  to { background-position: -120% 0; }
+}
+
+@keyframes terminal-type {
+  to { width: 35ch; }
+}
+
+@keyframes terminal-cursor-blink {
+  50% { opacity: 0; }
+}
+
+/* About: the two columns stay in view while the CardSwap timeline consumes scroll. */
+.about-scroll-stage {
+  position: relative;
+}
+
+.tech-skill:hover {
+  border-color: var(--skill-color);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--skill-color) 20%, transparent);
+}
+
+.tech-skill:hover .tech-skill__accent {
+  color: var(--skill-color);
+}
+
+.dark .tech-skill:hover {
+  border-color: var(--skill-color-dark);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--skill-color-dark) 20%, transparent);
+}
+
+.dark .tech-skill:hover .tech-skill__accent {
+  color: var(--skill-color-dark);
+}
+
+@media (min-width: 1024px) {
+  .about-scroll-stage {
+    --about-sticky-top: clamp(80px, 10vh, 104px);
+    --about-sticky-height: max(740px, calc(100vh - var(--about-sticky-top)));
+    height: calc(var(--about-sticky-height) + var(--about-scroll-distance, 2700px));
+  }
+
+  .about-scroll-stage__sticky {
+    position: sticky;
+    top: var(--about-sticky-top);
+    min-height: var(--about-sticky-height);
+  }
+}
+
+/* Shimmer badge animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSun, FaMoon, FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
@@ -132,7 +133,7 @@ export default function Navbar({ theme, toggleTheme }) {
           {/* Resume CTA */}
           <a
             href={personalInfo.cvFile}
-            download="Mouhamed-DIAGNE-CV.pdf"
+            download="Mouhamed_DIAGNE_Resume.pdf"
             className="hidden sm:inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium rounded-lg bg-slate-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-slate-800 dark:hover:bg-white transition-all font-mono shadow-sm"
           >
             {t("nav.resume")} ↗
@@ -179,7 +180,7 @@ export default function Navbar({ theme, toggleTheme }) {
               ))}
               <a
                 href={personalInfo.cvFile}
-                download="Mouhamed-DIAGNE-CV.pdf"
+                download="Mouhamed_DIAGNE_Resume.pdf"
                 className="mt-2 text-center py-2.5 rounded-lg bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-mono text-xs font-semibold shadow-sm"
               >
                 {t("hero.ctaResume")}
@@ -191,3 +192,8 @@ export default function Navbar({ theme, toggleTheme }) {
     </header>
   );
 }
+
+Navbar.propTypes = {
+  theme: PropTypes.oneOf(['dark', 'light']).isRequired,
+  toggleTheme: PropTypes.func.isRequired
+};

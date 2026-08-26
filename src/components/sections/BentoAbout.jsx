@@ -102,7 +102,7 @@ export default function BentoAbout() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-6 relative flex flex-col items-center justify-start pt-4 min-h-[540px]"
+            className="w-[calc(100%+2rem)] -mx-4 lg:mx-0 lg:w-auto lg:col-span-6 relative flex flex-col items-center justify-start pt-4 min-h-[540px]"
           >
             <div className="w-full h-full flex items-center justify-center">
               <CardSwap

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
@@ -14,7 +13,7 @@ export default function Experiences() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 dark:text-zinc-500 mb-2">
-            // Parcours Professionnel
+            {'// Parcours Professionnel'}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-zinc-100 tracking-tight">
             {t("exp.title")}
@@ -33,7 +32,7 @@ export default function Experiences() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 backdrop-blur-sm hover:border-slate-300 dark:hover:border-zinc-700 transition-all shadow-sm group"
+              className="cursor-target p-6 sm:p-8 rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 backdrop-blur-sm hover:border-slate-300 dark:hover:border-zinc-700 transition-all shadow-sm group"
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                 

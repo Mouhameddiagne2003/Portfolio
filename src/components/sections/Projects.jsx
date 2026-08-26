@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaBolt, FaArrowRight } from 'react-icons/fa';
@@ -30,7 +30,7 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
           <span className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 dark:text-zinc-500 mb-2">
-            // Réalisations & Systèmes
+            {'// Réalisations & Systèmes'}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-zinc-100 tracking-tight">
             {t("projects.title")}
@@ -46,7 +46,7 @@ export default function Projects() {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
+              className={`cursor-target px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
                 selectedCategory === cat.id
                   ? 'bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 shadow-md font-semibold'
                   : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200 dark:bg-zinc-900/60 dark:text-zinc-400 dark:hover:text-zinc-200 dark:border-zinc-800 shadow-sm'
@@ -66,7 +66,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="flex flex-col justify-between rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 overflow-hidden backdrop-blur-sm group hover:border-blue-500/50 dark:hover:border-zinc-700 transition-all shadow-sm"
+              className="cursor-target flex flex-col justify-between rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 overflow-hidden backdrop-blur-sm group hover:border-blue-500/50 dark:hover:border-zinc-700 transition-all shadow-sm"
             >
               <div>
                 {/* Image Preview Container */}

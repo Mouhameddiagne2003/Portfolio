@@ -60,7 +60,8 @@
     "title": "Work Experience",
     "subtitle": "My professional journey across innovative software companies and high-impact platforms.",
     "type": {
-      "internship": "Apprenticeship / Internship",
+      "internship": "Internship",
+      "apprenticeship": "Apprenticeship",
       "contract": "Contract / Freelance"
     },
     "awa": {
@@ -77,7 +78,7 @@
       ]
     },
     "ayweu": {
-      "role": "Full-Stack Web Developer & Designer",
+      "role": "Web Developer",
       "context": "Engineering and scaling the delivery operations platform handling local (Senegal) and cross-border logistics.",
       "points": [
         "Integrated third-party delivery dispatch APIs (Yango, Paps).",
@@ -88,7 +89,7 @@
       ]
     },
     "spadon": {
-      "role": "Frontend & Full-Stack Developer",
+      "role": "Web Developer & Java Backend",
       "context": "Architectural overhaul and performance optimization for Spadon's web platform.",
       "points": [
         "Engineered a full architectural and visual overhaul of Spadon's web platform for high responsiveness.",
@@ -245,4 +246,3 @@
     "backToTop": "Back to top"
   }
 }
-

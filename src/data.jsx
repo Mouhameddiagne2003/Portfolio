@@ -113,7 +113,7 @@ export const experiences = [
     period: "Août 2025 — Juillet 2026",
     logo: awa,
     location: "Dakar, Sénégal",
-    typeKey: "exp.type.internship",
+    typeKey: "exp.type.apprenticeship",
     skills: ["KeystoneJS 6", "React", "GraphQL", "Prisma", "MySQL", "Gemini / Vertex AI", "Google Cloud", "Wave / Orange Money API", "WhatsApp API"],
     pointsKey: "exp.awa.points",
   },

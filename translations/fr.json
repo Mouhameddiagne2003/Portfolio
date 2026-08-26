@@ -60,7 +60,8 @@
     "title": "Expériences Professionnelles",
     "subtitle": "Mon parcours au sein d'entreprises innovantes et de plateformes à fort impact.",
     "type": {
-      "internship": "Stage / Alternance",
+      "internship": "Stage",
+      "apprenticeship": "Alternance",
       "contract": "Mission / Freelance"
     },
     "awa": {
@@ -77,7 +78,7 @@
       ]
     },
     "ayweu": {
-      "role": "Développeur Web Full-Stack & Designer",
+      "role": "Développeur Web",
       "context": "Développement et évolution de la plateforme de gestion des opérations de livraison, avec prise en charge de flux locaux au Sénégal et internationaux.",
       "points": [
         "Intégration d’APIs externes de livraison (Yango, Paps).",
@@ -88,7 +89,7 @@
       ]
     },
     "spadon": {
-      "role": "Développeur Frontend & Full-Stack",
+      "role": "Développeur Web & Backend Java",
       "context": "Refonte moderne et optimisation des performances de la plateforme web Spadon.",
       "points": [
         "Refonte architecturale et graphique de la plateforme Spadon pour une expérience utilisateur moderne et fluide.",
@@ -245,4 +246,3 @@
     "backToTop": "Haut de page"
   }
 }
-

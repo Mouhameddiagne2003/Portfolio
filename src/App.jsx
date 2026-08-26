@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Navbar from './components/layout/Navbar.jsx';
 import Footer from './components/layout/Footer.jsx';
 import FloatingBackToTop from './components/ui/FloatingBackToTop.jsx';
+import TargetCursor from './components/ui/TargetCursor.jsx';
 import Hero from './components/sections/Hero.jsx';
 import BentoAbout from './components/sections/BentoAbout.jsx';
 import Experiences from './components/sections/Experiences.jsx';
@@ -36,6 +37,14 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 transition-colors duration-300 font-sans selection:bg-blue-100 dark:selection:bg-zinc-800 selection:text-blue-900 dark:selection:text-white bg-grid-pattern relative">
       <Analytics />
+      <TargetCursor
+        spinDuration={2}
+        hideDefaultCursor
+        parallaxOn
+        hoverDuration={0.2}
+        cursorColor={theme === 'dark' ? '#ffffff' : '#0f172a'}
+        cursorColorOnTarget={theme === 'dark' ? '#38bdf8' : '#2563eb'}
+      />
 
       {/* Floating Header with Scroll Progress */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />

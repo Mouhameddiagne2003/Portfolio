@@ -14,7 +14,6 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { personalInfo, stats } from '../../data.jsx';
 import AcidSquares from '../ui/AcidSquares.jsx';
 import ShinyText from '../ui/ShinyText.jsx';
-import TargetCursor from '../ui/TargetCursor.jsx';
 
 // Animated Counter Component that re-triggers on scroll into view
 function AnimatedCounter({ value, suffix = "" }) {
@@ -52,15 +51,7 @@ export default function Hero() {
 
   return (
     <section className="relative isolate min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-      <TargetCursor
-        spinDuration={2}
-        hideDefaultCursor
-        parallaxOn
-        hoverDuration={0.2}
-        cursorColor="#ffffff"
-        cursorColorOnTarget="#B497CF"
-      />
-      
+
       {/* React Bits AcidSquares WebGL Background */}
       <div className="absolute inset-0 z-0 w-full h-full opacity-45 dark:opacity-60">
         <AcidSquares
@@ -174,7 +165,7 @@ export default function Hero() {
 
               <a
                 href={personalInfo.cvFile}
-                download="Mouhamed-DIAGNE-CV.pdf"
+                download="Mouhamed_DIAGNE_Resume.pdf"
                 className="cursor-target inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 text-slate-800 dark:text-zinc-200 font-mono text-xs font-semibold hover:border-slate-400 dark:hover:border-zinc-600 transition-all shadow-sm"
               >
                 <FaDownload className="text-xs" />

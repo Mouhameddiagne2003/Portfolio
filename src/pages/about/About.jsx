@@ -119,7 +119,7 @@ const About = () => {
                                 </div>
                                 <br/>
                                 <br/>
-                                <a href={Cv} download='Mouhamed-DIAGNE-Cv-Resume '
+                                <a href={Cv} download="Mouhamed_DIAGNE_Resume.pdf"
                                    className="  align-center button inline-block text-titleColor border border-solid border-firstColor pt-[15px] pr-[70px] pb-[15px] pl-[35px] rounded-[35px] text-[15px] font-medium relative">
                                     {/*<button className="">*/}
                                     Download CV

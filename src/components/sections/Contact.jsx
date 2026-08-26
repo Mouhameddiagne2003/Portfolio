@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { 
@@ -65,7 +65,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 dark:text-zinc-500 mb-2">
-            // Me Joindre
+            {'// Me Joindre'}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-zinc-100 tracking-tight">
             {t("contact.title")}
@@ -250,7 +250,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-xs font-bold hover:bg-slate-800 dark:hover:bg-white disabled:opacity-50 transition-all shadow-md"
+                  className="cursor-target w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-xs font-bold hover:bg-slate-800 dark:hover:bg-white disabled:opacity-50 transition-all shadow-md"
                 >
                   {loading ? (
                     <span>{t("contact.sending")}</span>

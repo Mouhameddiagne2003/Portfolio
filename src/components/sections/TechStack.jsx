@@ -33,7 +33,7 @@ export default function TechStack() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 backdrop-blur-sm hover:border-slate-300 dark:hover:border-zinc-700 transition-all shadow-sm flex flex-col justify-between"
+                className="cursor-target p-6 rounded-2xl bg-white dark:bg-zinc-900/70 border border-slate-200 dark:border-zinc-800 backdrop-blur-sm hover:border-slate-300 dark:hover:border-zinc-700 transition-all shadow-sm flex flex-col justify-between"
               >
                 <div>
                   {/* Category Header */}
@@ -58,7 +58,7 @@ export default function TechStack() {
                             '--skill-color': skill.color || '#3b82f6',
                             '--skill-color-dark': skill.darkColor || skill.color || '#60a5fa'
                           }}
-                          className="tech-skill flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-zinc-950/50 border border-slate-200/80 dark:border-zinc-800/80 transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5"
+                          className="cursor-target tech-skill flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-zinc-950/50 border border-slate-200/80 dark:border-zinc-800/80 transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5"
                         >
                           <SkillIcon 
                             className="tech-skill__accent text-base transition-colors duration-300 shrink-0"

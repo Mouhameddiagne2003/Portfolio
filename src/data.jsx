@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FaJava,
   FaReact,
@@ -9,7 +8,6 @@ import {
   FaPhp,
   FaCode,
   FaServer,
-  FaDatabase,
   FaTools,
   FaBrain,
   FaMoneyBillWave,
@@ -23,7 +21,6 @@ import {
   SiMongodb,
   SiMysql,
   SiSupabase,
-  SiFirebase,
   SiTailwindcss,
   SiAngular,
   SiUml,
@@ -51,7 +48,23 @@ import feindy from './assets/feindy.jpg';
 import awa from './assets/awa_logo.png';
 import ayweu from './assets/ayweu_logo.png';
 import EngineerPhoto from './assets/me_engineer.jpg';
-import CvPdf from './assets/Mouhamed_DIAGNE_FlowCV_Resume_2026-08-25.pdf';
+import CvPdfFr from './assets/Mouhamed_DIAGNE_FlowCV_Resume_2026-08-25.pdf';
+import CvPdfEn from './assets/Mouhamed_DIAGNE_Resume_FullStack_EN_.pdf';
+
+export const resumes = {
+  fr: {
+    file: CvPdfFr,
+    downloadName: 'Mouhamed_DIAGNE_CV.pdf',
+  },
+  en: {
+    file: CvPdfEn,
+    downloadName: 'Mouhamed_DIAGNE_Resume.pdf',
+  },
+};
+
+export const getResume = (language = 'fr') => (
+  language.toLowerCase().startsWith('en') ? resumes.en : resumes.fr
+);
 
 export const personalInfo = {
   name: "Mouhamed DIAGNE",
@@ -62,7 +75,7 @@ export const personalInfo = {
   location: "Dakar, Sénégal",
   statusKey: "hero.status",
   profileImg: EngineerPhoto,
-  cvFile: CvPdf,
+  cvFile: CvPdfFr,
   socials: {
     github: "https://github.com/Mouhameddiagne2003",
     linkedin: "https://www.linkedin.com/in/mouhamed-diagne-265015245/",
@@ -124,8 +137,8 @@ export const experiences = [
     contextKey: "exp.ayweu.context",
     period: "Mars 2025 — Août 2025",
     logo: ayweu,
-    location: "Dakar & Gambie",
-    typeKey: "exp.type.internship",
+    location: "Dakar",
+    typeKey: "exp.type.internshipFreelanceRemote",
     skills: ["Next.js", "Node.js", "Express", "MongoDB", "ActivePieces", "Paydunya", "APIs Yango / Paps", "WhatsApp API"],
     pointsKey: "exp.ayweu.points",
   },
@@ -160,8 +173,8 @@ export const experiences = [
     contextKey: "exp.nandigium.context",
     period: "Juil 2022 — Sept 2022",
     logo: nandigium,
-    location: "Dakar, Sénégal",
-    typeKey: "exp.type.internship",
+    location: "Paris, France",
+    typeKey: "exp.type.internshipRemote",
     skills: ["Cybersécurité", "ISO 27001", "Réseaux Sécurisés", "Audit"],
     pointsKey: "exp.nandigium.points",
   }

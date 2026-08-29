@@ -11,7 +11,7 @@ import {
   FaTerminal
 } from 'react-icons/fa';
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { personalInfo, stats } from '../../data.jsx';
+import { getResume, personalInfo, stats } from '../../data.jsx';
 import AcidSquares from '../ui/AcidSquares.jsx';
 import ShinyText from '../ui/ShinyText.jsx';
 
@@ -47,7 +47,8 @@ AnimatedCounter.propTypes = {
 };
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const activeResume = getResume(i18n.resolvedLanguage || i18n.language);
 
   return (
     <section className="relative isolate min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
@@ -164,8 +165,8 @@ export default function Hero() {
               </a>
 
               <a
-                href={personalInfo.cvFile}
-                download="Mouhamed_DIAGNE_Resume.pdf"
+                href={activeResume.file}
+                download={activeResume.downloadName}
                 className="cursor-target inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 text-slate-800 dark:text-zinc-200 font-mono text-xs font-semibold hover:border-slate-400 dark:hover:border-zinc-600 transition-all shadow-sm"
               >
                 <FaDownload className="text-xs" />

@@ -46,7 +46,7 @@ export default function TechStack() {
                     </h3>
                   </div>
 
-                  {/* Skills List in Category with Brand Color on Hover */}
+                  {/* Skills List in Category with persistent brand colors */}
                   <div className="grid grid-cols-2 gap-2.5">
                     {category.skills.map((skill, sIdx) => {
                       const SkillIcon = skill.icon;
@@ -58,7 +58,7 @@ export default function TechStack() {
                             '--skill-color': skill.color || '#3b82f6',
                             '--skill-color-dark': skill.darkColor || skill.color || '#60a5fa'
                           }}
-                          className="cursor-target tech-skill flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-zinc-950/50 border border-slate-200/80 dark:border-zinc-800/80 transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5"
+                          className="cursor-target tech-skill relative isolate flex items-center gap-2.5 p-2.5 rounded-xl overflow-hidden bg-slate-50 dark:bg-zinc-950/50 border transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
                         >
                           <SkillIcon 
                             className="tech-skill__accent text-base transition-colors duration-300 shrink-0"

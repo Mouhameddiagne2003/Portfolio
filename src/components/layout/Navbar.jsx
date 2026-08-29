@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon, FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
-import { personalInfo } from '../../data.jsx';
+import { FaSun, FaMoon, FaBars, FaTimes, FaGlobe, FaDownload } from 'react-icons/fa';
+import { getResume } from '../../data.jsx';
 const FaviconImg = '/favicon.png';
 
 const navLinks = [
@@ -16,6 +16,8 @@ const navLinks = [
 
 export default function Navbar({ theme, toggleTheme }) {
   const { t, i18n } = useTranslation();
+  const activeLanguage = i18n.resolvedLanguage || i18n.language || 'fr';
+  const activeResume = getResume(activeLanguage);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -54,7 +56,7 @@ export default function Navbar({ theme, toggleTheme }) {
   }, []);
 
   const toggleLanguage = () => {
-    const nextLang = i18n.language === 'fr' ? 'en' : 'fr';
+    const nextLang = activeLanguage.toLowerCase().startsWith('fr') ? 'en' : 'fr';
     i18n.changeLanguage(nextLang);
   };
 
@@ -118,7 +120,7 @@ export default function Navbar({ theme, toggleTheme }) {
             title="Changer de langue / Switch language"
           >
             <FaGlobe className="text-slate-500 dark:text-zinc-400 text-[11px]" />
-            <span className="uppercase">{i18n.language === 'fr' ? 'EN' : 'FR'}</span>
+            <span className="uppercase">{activeLanguage.toLowerCase().startsWith('fr') ? 'EN' : 'FR'}</span>
           </button>
 
           {/* Theme Toggle */}
@@ -132,11 +134,12 @@ export default function Navbar({ theme, toggleTheme }) {
 
           {/* Resume CTA */}
           <a
-            href={personalInfo.cvFile}
-            download="Mouhamed_DIAGNE_Resume.pdf"
-            className="hidden sm:inline-flex items-center justify-center px-4 py-1.5 text-xs font-medium rounded-lg bg-slate-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-slate-800 dark:hover:bg-white transition-all font-mono shadow-sm"
+            href={activeResume.file}
+            download={activeResume.downloadName}
+            className="cursor-target hidden sm:inline-flex items-center justify-center gap-2 px-4 py-1.5 text-xs font-medium rounded-lg bg-slate-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-slate-800 dark:hover:bg-white transition-all font-mono shadow-sm"
           >
-            {t("nav.resume")} ↗
+            {t("nav.resume")}
+            <FaDownload className="text-[11px]" aria-hidden="true" />
           </a>
 
           {/* Mobile Menu Button */}
@@ -179,11 +182,12 @@ export default function Navbar({ theme, toggleTheme }) {
                 </a>
               ))}
               <a
-                href={personalInfo.cvFile}
-                download="Mouhamed_DIAGNE_Resume.pdf"
-                className="mt-2 text-center py-2.5 rounded-lg bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-mono text-xs font-semibold shadow-sm"
+                href={activeResume.file}
+                download={activeResume.downloadName}
+                className="cursor-target mt-2 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-mono text-xs font-semibold shadow-sm"
               >
                 {t("hero.ctaResume")}
+                <FaDownload className="text-[11px]" aria-hidden="true" />
               </a>
             </nav>
           </motion.div>

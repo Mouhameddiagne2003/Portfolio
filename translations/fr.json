@@ -62,6 +62,8 @@
     "type": {
       "internship": "Stage",
       "apprenticeship": "Alternance",
+      "internshipFreelanceRemote": "Stage / Freelance / Remote",
+      "internshipRemote": "Stage / Remote",
       "contract": "Mission / Freelance"
     },
     "awa": {
